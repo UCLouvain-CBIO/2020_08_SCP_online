@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.1.25)  7 AUG 2020 11:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.1.25)  12 AUG 2020 13:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1042,12 +1042,81 @@ Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
 \RaggedRightParindent=\skip71
 \JustifyingParindent=\skip72
 )
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
+\pgfnodeparttextbox=\box55
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
+.sty
+Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen190
+\pgf@nodesepend=\dimen191
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
+.sty
+Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
+)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen192
+\pgffor@skip=\dimen193
+\pgffor@stack=\toks47
+\pgffor@toks=\toks48
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
+.code.tex
+File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
+\pgf@plot@mark@count=\count156
+\pgfplotmarksize=\dimen194
+)
+\tikz@lastx=\dimen195
+\tikz@lasty=\dimen196
+\tikz@lastxsaved=\dimen197
+\tikz@lastysaved=\dimen198
+\tikzleveldistance=\dimen199
+\tikzsiblingdistance=\dimen256
+\tikz@figbox=\box56
+\tikz@figbox@bg=\box57
+\tikz@tempbox=\box58
+\tikz@tempbox@bg=\box59
+\tikztreelevel=\count157
+\tikznumberofchildren=\count158
+\tikznumberofcurrentchild=\count159
+\tikz@fig@count=\count160
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
+\pgfmatrixcurrentrow=\count161
+\pgfmatrixcurrentcolumn=\count162
+\pgf@matrix@numberofcolumns=\count163
+)
+\tikz@expandcount=\count164
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
+)))
 (/usr/share/texlive/texmf-dist/tex/latex/wrapfig/wrapfig.sty
-\wrapoverhang=\dimen190
-\WF@size=\dimen191
-\c@WF@wrappedlines=\count156
-\WF@box=\box55
-\WF@everypar=\toks47
+\wrapoverhang=\dimen257
+\WF@size=\dimen258
+\c@WF@wrappedlines=\count165
+\WF@box=\box60
+\WF@everypar=\toks49
 Package: wrapfig 2003/01/31  v 3.6
 )
 (/usr/share/texlive/texmf-dist/tex/latex/xmpincl/xmpincl.sty
@@ -1060,24 +1129,24 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count157
-\lst@gtempboxa=\box56
-\lst@token=\toks48
-\lst@length=\count158
-\lst@currlwidth=\dimen192
-\lst@column=\count159
-\lst@pos=\count160
-\lst@lostspace=\dimen193
-\lst@width=\dimen194
-\lst@newlines=\count161
-\lst@lineno=\count162
-\lst@maxwidth=\dimen195
+\lst@mode=\count166
+\lst@gtempboxa=\box61
+\lst@token=\toks50
+\lst@length=\count167
+\lst@currlwidth=\dimen259
+\lst@column=\count168
+\lst@pos=\count169
+\lst@lostspace=\dimen260
+\lst@width=\dimen261
+\lst@newlines=\count170
+\lst@lineno=\count171
+\lst@maxwidth=\dimen262
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count163
-\lst@skipnumbers=\count164
-\lst@framebox=\box57
+\c@lstnumber=\count172
+\lst@skipnumbers=\count173
+\lst@framebox=\box62
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2015/06/04 1.6 listings configuration
@@ -1092,26 +1161,202 @@ File: lstlang2.sty 2015/06/04 1.6 listings language file
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang3.sty
 File: lstlang3.sty 2015/06/04 1.6 listings language file
-) (./slides.aux)
+)
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\begingroup' on input line 65.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\catcode' on input line 65.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\active' on input line 65.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<def>-command' on input line 65.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\csname\endcsname' on input line 65.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\catcode' on input line 65.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\active' on input line 65.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<let>-command' on input line 65.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\csname\endcsname' on input line 65.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<let>-command' on input line 65.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\%' on input line 65.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\catcode' on input line 65.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\active' on input line 65.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<def>-command' on input line 65.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\csname\endcsname' on input line 65.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<def>-command' on input line 65.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\#' on input line 65.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\catcode' on input line 65.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<def>-command' on input line 65.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\csname\endcsname' on input line 65.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<def>-command' on input line 65.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\&' on input line 65.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<def>-command' on input line 65.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\textunderscore' on input line 65.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<let>-command' on input line 65.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\_' on input line 65.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\catcode' on input line 65.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\active' on input line 65.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<let>-command' on input line 65.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\csname\endcsname' on input line 65.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<let>-command' on input line 65.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\csname\endcsname' on input line 65.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<let>-command' on input line 65.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\~' on input line 65.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<let>-command' on input line 65.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\textasciitilde' on input line 65.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<let>-command' on input line 65.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\\' on input line 65.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<def>-command' on input line 65.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\csname\endcsname' on input line 65.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<def>-command' on input line 65.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\Hy@tempa' on input line 65.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<def>-command' on input line 65.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\Hy@tempa' on input line 65.
+
+(./slides.aux)
 \openout1 = `slides.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Try loading font information for T1+lmss on input line 63.
-
-(/usr/share/texmf/tex/latex/lm/t1lmss.fd
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 65.
+ (/usr/share/texmf/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 *geometry* driver: auto-detecting
@@ -1150,17 +1395,17 @@ File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count165
-\scratchdimen=\dimen196
-\scratchbox=\box58
-\nofMPsegments=\count166
-\nofMParguments=\count167
-\everyMPshowfont=\toks49
-\MPscratchCnt=\count168
-\MPscratchDim=\dimen197
-\MPnumerator=\count169
-\makeMPintoPDFobject=\count170
-\everyMPtoPDFconversion=\toks50
+\scratchcounter=\count174
+\scratchdimen=\dimen263
+\scratchbox=\box63
+\nofMPsegments=\count175
+\nofMParguments=\count176
+\everyMPshowfont=\toks51
+\MPscratchCnt=\count177
+\MPscratchDim=\dimen264
+\MPnumerator=\count178
+\makeMPintoPDFobject=\count179
+\everyMPtoPDFconversion=\toks52
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -1179,8 +1424,8 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box59
-Package hyperref Info: Link coloring OFF on input line 63.
+\AtBeginShipoutBox=\box64
+Package hyperref Info: Link coloring OFF on input line 65.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1188,62 +1433,62 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count171
+\c@section@level=\count180
 )
-LaTeX Info: Redefining \ref on input line 63.
-LaTeX Info: Redefining \pageref on input line 63.
-LaTeX Info: Redefining \nameref on input line 63.
+LaTeX Info: Redefining \ref on input line 65.
+LaTeX Info: Redefining \pageref on input line 65.
+LaTeX Info: Redefining \nameref on input line 65.
 
 (./slides.out) (./slides.out)
 \@outlinefile=\write5
 \openout5 = `slides.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/lmr/m/n --> OT1/cmss/m/n on input line 63.
+(Font)                  OT1/lmr/m/n --> OT1/cmss/m/n on input line 65.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/lmr/bx/n --> OT1/cmss/bx/n on input line 63.
+(Font)                  OT1/lmr/bx/n --> OT1/cmss/bx/n on input line 65.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 63.
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 65.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 63.
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 65.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/lmss/m/n --> T1/lmr/m/n on input line 63.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 63.
+(Font)                  OT1/lmss/m/n --> T1/lmr/m/n on input line 65.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 65.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/lmr/bx/n --> T1/lmss/bx/n on input line 63.
+(Font)                  OT1/lmr/bx/n --> T1/lmss/bx/n on input line 65.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/lmr/bx/n --> T1/lmss/bx/n on input line 63.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 63.
+(Font)                  OT1/lmr/bx/n --> T1/lmss/bx/n on input line 65.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 65.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> T1/lmss/m/n on input line 63.
+(Font)                  OT1/lmss/m/n --> T1/lmss/m/n on input line 65.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> T1/lmss/m/n on input line 63.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 63.
+(Font)                  OT1/lmss/bx/n --> T1/lmss/m/n on input line 65.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 65.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> T1/lmss/m/it on input line 63.
+(Font)                  OT1/lmr/m/it --> T1/lmss/m/it on input line 65.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/lmr/bx/it --> T1/lmss/m/it on input line 63.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 63.
+(Font)                  OT1/lmr/bx/it --> T1/lmss/m/it on input line 65.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 65.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 63.
+(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 65.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 63.
+(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 65.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  T1/lmss/m/n --> T1/lmss/bx/n on input line 63.
+(Font)                  T1/lmss/m/n --> T1/lmss/bx/n on input line 65.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  T1/lmss/m/it --> T1/lmss/bx/it on input line 63.
+(Font)                  T1/lmss/m/it --> T1/lmss/bx/it on input line 65.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/lmss/bx/n --> T1/lmr/bx/n on input line 63.
+(Font)                  OT1/lmss/bx/n --> T1/lmr/bx/n on input line 65.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  T1/lmss/bx/n --> T1/lmss/bx/n on input line 63.
+(Font)                  T1/lmss/bx/n --> T1/lmss/bx/n on input line 65.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  T1/lmss/m/n --> T1/lmss/bx/n on input line 63.
+(Font)                  T1/lmss/m/n --> T1/lmss/bx/n on input line 65.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  T1/lmss/m/it --> T1/lmss/bx/it on input line 63.
+(Font)                  T1/lmss/m/it --> T1/lmss/bx/it on input line 65.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  T1/lmtt/m/n --> T1/lmtt/bx/n on input line 63.
+(Font)                  T1/lmtt/m/n --> T1/lmtt/bx/n on input line 65.
 
 (/usr/share/texlive/texmf-dist/tex/latex/translator/translator-basic-dictionary
 -English.dict
@@ -1269,117 +1514,121 @@ Dictionary: translator-numbers-dictionary, Language: English
 ry-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 ) ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 63.
-\c@lstlisting=\count172
+LaTeX Info: Redefining \selectfont on input line 65.
+\c@lstlisting=\count181
  (./slides.nav)
-[1
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 92.
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./slides.toc) [2
+(/usr/share/texmf/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OT1+lmss on input line 92.
 
-]
-LaTeX Font Info:    Try loading font information for OT1+lmss on input line 134
-.
 
 (/usr/share/texmf/tex/latex/lm/ot1lmss.fd
 File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 134.
-
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 92.
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 134
-.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 92.
+
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 134
-.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 92.
+
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 134.
+(Font)              <10.95> on input line 92.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 134.
+(Font)              <8> on input line 92.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 134.
-LaTeX Font Info:    Try loading font information for U+msa on input line 134.
+(Font)              <6> on input line 92.
+LaTeX Font Info:    Try loading font information for U+msa on input line 92.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 134.
+LaTeX Font Info:    Try loading font information for U+msb on input line 92.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 134.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 92.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <8> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 134.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 92.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <6> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 134.
- [3
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 92.
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./slides.toc) [2
+
+] [3
 
 ] [4
 
-]
-(./slides.toc) [5
+] (./slides.toc)
+[5
+
+] [6
+
+] (./slides.toc) [7
 
 ]
-<figs/sticker_SingleCellExperiment.png, id=184, 125.0271pt x 143.8173pt>
+<figs/sticker_SingleCellExperiment.png, id=250, 125.0271pt x 143.8173pt>
 File: figs/sticker_SingleCellExperiment.png Graphic file (type png)
 <use figs/sticker_SingleCellExperiment.png>
 Package pdftex.def Info: figs/sticker_SingleCellExperiment.png  used on input l
-ine 179.
+ine 199.
 (pdftex.def)             Requested size: 61.45703pt x 70.69492pt.
-<figs/SingleCellExperiment.png, id=186, 255.1131pt x 138.0357pt>
+<figs/SingleCellExperiment.png, id=252, 255.1131pt x 138.0357pt>
 File: figs/SingleCellExperiment.png Graphic file (type png)
 <use figs/SingleCellExperiment.png>
-Package pdftex.def Info: figs/SingleCellExperiment.png  used on input line 179.
+Package pdftex.def Info: figs/SingleCellExperiment.png  used on input line 199.
 
 (pdftex.def)             Requested size: 276.559pt x 149.64922pt.
- [6
+ [8
 
  <./figs/sticker_SingleCellExperiment.png> <./figs/SingleCellExperiment.png (PN
 G copy)>]
-<figs/sticker_QFeatures.png, id=214, 124.7862pt x 144.54pt>
+<figs/sticker_QFeatures.png, id=280, 124.7862pt x 144.54pt>
 File: figs/sticker_QFeatures.png Graphic file (type png)
 <use figs/sticker_QFeatures.png>
-Package pdftex.def Info: figs/sticker_QFeatures.png  used on input line 201.
+Package pdftex.def Info: figs/sticker_QFeatures.png  used on input line 224.
 (pdftex.def)             Requested size: 61.45703pt x 71.18471pt.
-<figs/QFeatures.png, id=215, 526.96875pt x 325.5914pt>
+<figs/QFeatures.png, id=281, 526.96875pt x 325.5914pt>
 File: figs/QFeatures.png Graphic file (type png)
 <use figs/QFeatures.png>
-Package pdftex.def Info: figs/QFeatures.png  used on input line 201.
-(pdftex.def)             Requested size: 245.83282pt x 151.89027pt.
- [7
+Package pdftex.def Info: figs/QFeatures.png  used on input line 224.
+(pdftex.def)             Requested size: 138.2795pt x 85.43672pt.
+<figs/QFeatures_data.png, id=282, 526.96875pt x 325.5914pt>
+File: figs/QFeatures_data.png Graphic file (type png)
+<use figs/QFeatures_data.png>
+Package pdftex.def Info: figs/QFeatures_data.png  used on input line 224.
+(pdftex.def)             Requested size: 162.86325pt x 100.62427pt.
+ [9
 
- <./figs/sticker_QFeatures.png> <./figs/QFeatures.png (PNG copy)>]
-<figs/SCP_framework.png, id=244, 663.98062pt x 310.91156pt>
+ <./figs/sticker_QFeatures.png> <./figs/QFeatures.png (PNG copy)> <./figs/QFeat
+ures_data.png>]
+<figs/SCP_framework.png, id=311, 663.98062pt x 310.91156pt>
 File: figs/SCP_framework.png Graphic file (type png)
 <use figs/SCP_framework.png>
-Package pdftex.def Info: figs/SCP_framework.png  used on input line 214.
+Package pdftex.def Info: figs/SCP_framework.png  used on input line 237.
 (pdftex.def)             Requested size: 276.559pt x 129.50029pt.
- [8
+ [10
 
- <./figs/SCP_framework.png>] [9
-
-] (./slides.toc) [10
-
-]
+ <./figs/SCP_framework.png>]
 \openout4 = `slides.vrb'.
 
-
-(./slides.vrb
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 3.
- (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
+ (./slides.vrb
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
@@ -1435,7 +1684,123 @@ Overfull \hbox (1.46361pt too wide) in paragraph at lines 22--23
 ]
 \openout4 = `slides.vrb'.
 
- (./slides.vrb) [12
+ (./slides.vrb
+Overfull \hbox (3.37683pt too wide) in paragraph at lines 13--14
+[][][][][][][][][][][][][][][][][][]
+ []
+
+
+Overfull \hbox (63.93991pt too wide) in paragraph at lines 14--15
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (19.31448pt too wide) in paragraph at lines 15--16
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][]
+ []
+
+
+Overfull \hbox (19.31448pt too wide) in paragraph at lines 16--17
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][]
+ []
+
+
+Overfull \hbox (19.31448pt too wide) in paragraph at lines 17--18
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][]
+ []
+
+
+Overfull \hbox (19.31448pt too wide) in paragraph at lines 18--19
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][]
+ []
+
+
+Overfull \hbox (19.31448pt too wide) in paragraph at lines 19--20
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][]
+ []
+
+
+Overfull \hbox (16.12695pt too wide) in paragraph at lines 20--21
+[][][][][][][][][][][][][][][][][][][][][]
+ []
+
+
+Overfull \hbox (19.31448pt too wide) in paragraph at lines 21--22
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][]
+ []
+
+
+Overfull \hbox (19.31448pt too wide) in paragraph at lines 22--23
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][]
+ []
+
+
+Overfull \hbox (19.31448pt too wide) in paragraph at lines 23--24
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][]
+ []
+
+
+Overfull \hbox (19.31448pt too wide) in paragraph at lines 24--25
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][]
+ []
+
+
+Overfull \hbox (19.31448pt too wide) in paragraph at lines 25--25
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][]
+ []
+
+) [12
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb) [13
+
+] (./slides.vrb) [14
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (0.1893pt too wide) in paragraph at lines 16--17
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][] 
+ []
+
+) [15
+
+] (./slides.vrb
+Overfull \hbox (0.1893pt too wide) in paragraph at lines 16--17
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][] 
+ []
+
+) [16
+
+] (./slides.vrb
+Overfull \hbox (0.1893pt too wide) in paragraph at lines 16--17
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][] 
+ []
+
+) [17
+
+] (./slides.toc) [18
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb) [19
 
 ]
 \openout4 = `slides.vrb'.
@@ -1457,80 +1822,91 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <9> on input line 8.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <9> not available
 (Font)              Font shape `T1/lmss/m/sl' tried instead on input line 8.
-) [13
+) [20
 
 ]
 \openout4 = `slides.vrb'.
 
- (./slides.vrb
-<figs/medianCV.png, id=411, 466.74374pt x 225.84375pt>
+
+(./slides.vrb
+<figs/medianCV.png, id=611, 466.74374pt x 225.84375pt>
 File: figs/medianCV.png Graphic file (type png)
 <use figs/medianCV.png>
 Package pdftex.def Info: figs/medianCV.png  used on input line 18.
 (pdftex.def)             Requested size: 215.10196pt x 104.08235pt.
-) [14
+) [21
 
  <./figs/medianCV.png (PNG copy)>]
 \openout4 = `slides.vrb'.
 
- (./slides.vrb) [15
+ (./slides.vrb) [22
 
 ]
 \openout4 = `slides.vrb'.
 
- (./slides.vrb) [16
+
+(./slides.vrb) [23
 
 ]
 \openout4 = `slides.vrb'.
 
- (./slides.vrb)
-[17
+ (./slides.vrb) [24
 
 ]
 \openout4 = `slides.vrb'.
 
- (./slides.vrb) [18
-
-] (./slides.toc) [19
-
-]
-<figs/Benchmark_pep_venn.png, id=575, 526.96875pt x 335.75438pt>
-File: figs/Benchmark_pep_venn.png Graphic file (type png)
-<use figs/Benchmark_pep_venn.png>
-Package pdftex.def Info: figs/Benchmark_pep_venn.png  used on input line 458.
-(pdftex.def)             Requested size: 153.64493pt x 97.89395pt.
-<figs/Benchmark_pep_err.png, id=576, 487.06969pt x 335.75438pt>
-File: figs/Benchmark_pep_err.png Graphic file (type png)
-<use figs/Benchmark_pep_err.png>
-Package pdftex.def Info: figs/Benchmark_pep_err.png  used on input line 458.
-(pdftex.def)             Requested size: 153.64493pt x 105.91176pt.
-<figs/Benchmark_prot_venn.png, id=577, 526.96875pt x 335.75438pt>
-File: figs/Benchmark_prot_venn.png Graphic file (type png)
-<use figs/Benchmark_prot_venn.png>
-Package pdftex.def Info: figs/Benchmark_prot_venn.png  used on input line 458.
-(pdftex.def)             Requested size: 153.64493pt x 97.89395pt.
-<figs/Benchmark_prot_err.png, id=578, 376.40625pt x 225.84375pt>
-File: figs/Benchmark_prot_err.png Graphic file (type png)
-<use figs/Benchmark_prot_err.png>
-Package pdftex.def Info: figs/Benchmark_prot_err.png  used on input line 458.
-(pdftex.def)             Requested size: 153.64493pt x 92.18988pt.
- [20
-
- <./figs/Benchmark_pep_venn.png (PNG copy)> <./figs/Benchmark_pep_err.png> <./f
-igs/Benchmark_prot_venn.png (PNG copy)> <./figs/Benchmark_prot_err.png>] [21
-
-] [22
-
-] [23
+ (./slides.vrb) [25
 
 ] (./slides.toc)
-[24
+[26
 
-] [25
+]
+<figs/Benchmark_pep_venn.png, id=775, 526.96875pt x 335.75438pt>
+File: figs/Benchmark_pep_venn.png Graphic file (type png)
+<use figs/Benchmark_pep_venn.png>
+Package pdftex.def Info: figs/Benchmark_pep_venn.png  used on input line 592.
+(pdftex.def)             Requested size: 153.64493pt x 97.89395pt.
+<figs/Benchmark_pep_err.png, id=776, 487.06969pt x 335.75438pt>
+File: figs/Benchmark_pep_err.png Graphic file (type png)
+<use figs/Benchmark_pep_err.png>
+Package pdftex.def Info: figs/Benchmark_pep_err.png  used on input line 592.
+(pdftex.def)             Requested size: 153.64493pt x 105.91176pt.
+<figs/Benchmark_prot_venn.png, id=777, 526.96875pt x 335.75438pt>
+File: figs/Benchmark_prot_venn.png Graphic file (type png)
+<use figs/Benchmark_prot_venn.png>
+Package pdftex.def Info: figs/Benchmark_prot_venn.png  used on input line 592.
+(pdftex.def)             Requested size: 153.64493pt x 97.89395pt.
+<figs/Benchmark_prot_err.png, id=778, 376.40625pt x 225.84375pt>
+File: figs/Benchmark_prot_err.png Graphic file (type png)
+<use figs/Benchmark_prot_err.png>
+Package pdftex.def Info: figs/Benchmark_prot_err.png  used on input line 592.
+(pdftex.def)             Requested size: 153.64493pt x 92.18988pt.
+ [27
 
-] [26
+ <./figs/Benchmark_pep_venn.png (PNG copy)> <./figs/Benchmark_pep_err.png> <./f
+igs/Benchmark_prot_venn.png (PNG copy)> <./figs/Benchmark_prot_err.png>] [28
 
-] [27
+] [29
+
+]
+<figs/missingness.pdf, id=859, 433.62pt x 505.89pt>
+File: figs/missingness.pdf Graphic file (type pdf)
+<use figs/missingness.pdf>
+Package pdftex.def Info: figs/missingness.pdf  used on input line 611.
+(pdftex.def)             Requested size: 215.10196pt x 250.9528pt.
+
+Overfull \vbox (5.67967pt too high) detected at line 611
+ []
+
+[30
+
+ <./figs/missingness.pdf>] (./slides.toc) [31
+
+] [32
+
+] [33
+
+] [34
 
 ]
 \tf@nav=\write6
@@ -1542,22 +1918,22 @@ igs/Benchmark_prot_venn.png (PNG copy)> <./figs/Benchmark_prot_err.png>] [21
 \tf@snm=\write8
 \openout8 = `slides.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 544.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 544.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 674.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 674.
  (./slides.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 544.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 544.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 674.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 674.
 Package rerunfilecheck Info: File `slides.out' has not changed.
-(rerunfilecheck)             Checksum: 8F3DA7D60F427268C693C5C91CF4EAF4;250.
+(rerunfilecheck)             Checksum: 4C5BC906EC7F7652C6B815581FB876D8;288.
  ) 
 Here is how much of TeX's memory you used:
- 21757 strings out of 494880
- 381904 string characters out of 6179601
- 482768 words of memory out of 5000000
- 24485 multiletter control sequences out of 15000+600000
- 83534 words of font info for 76 fonts, out of 8000000 for 9000
+ 24739 strings out of 494880
+ 451085 string characters out of 6179601
+ 609659 words of memory out of 5000000
+ 27383 multiletter control sequences out of 15000+600000
+ 86623 words of font info for 78 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 56i,14n,79p,773b,2058s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,14n,79p,773b,2057s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/texmf/fonts/type1/
 public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/s
 hare/texmf/fonts/type1/public/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public
@@ -1565,11 +1941,12 @@ hare/texmf/fonts/type1/public/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public
 texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/public/lm
 /lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt8.pfb></usr/share/texmf
 /fonts/type1/public/lm/lmtt9.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/symbols/msam10.pfb>
-Output written on slides.pdf (27 pages, 652458 bytes).
+lic/amsfonts/symbols/msam10.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/q
+hvr.pfb>
+Output written on slides.pdf (34 pages, 1153101 bytes).
 PDF statistics:
- 841 PDF objects out of 1000 (max. 8388607)
- 773 compressed objects within 8 object streams
- 60 named destinations out of 1000 (max. 500000)
- 133 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1059 PDF objects out of 1200 (max. 8388607)
+ 976 compressed objects within 10 object streams
+ 75 named destinations out of 1000 (max. 500000)
+ 151 words of extra memory for PDF output out of 10000 (max. 10000000)
 
