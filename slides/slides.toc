@@ -1,0 +1,5 @@
+\beamer@sectionintoc {1}{Introduction}{2}{0}{1}
+\beamer@sectionintoc {2}{Data framework}{5}{0}{2}
+\beamer@sectionintoc {3}{Standardized workflow}{10}{0}{3}
+\beamer@sectionintoc {4}{Replicating SCoPE2}{19}{0}{4}
+\beamer@sectionintoc {5}{Conclusion}{24}{0}{5}

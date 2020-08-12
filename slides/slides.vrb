@@ -1,0 +1,32 @@
+\frametitlesection{Custom functions}
+
+    Some custom function can be applied to the data set too.
+
+    Example: batch correction using \hcode{sva::ComBat}. First, extract the data
+    to correct
+
+    \begin{lstlisting}[basicstyle = \scriptsize\ttfamily\color{vdgray}]
+sce <- specht2019v2[["proteins"]]
+    \end{lstlisting}
+
+    Build the correction matrix and apply the ComBat algorithm
+
+    \begin{lstlisting}[basicstyle = \scriptsize\ttfamily\color{vdgray}]
+batch <- colData(sce)$Set
+model <- model.matrix(~ SampleType, data = colData(sce))
+assay(sce) <- ComBat(dat = assay(sce),
+                     batch = batch,
+                     mod = model)
+    \end{lstlisting}
+
+    Add the corrected protein to the dataset and keep feature relationships
+
+    \begin{lstlisting}[basicstyle = \scriptsize\ttfamily\color{vdgray}]
+addAssay(specht2019v2,
+         sce,
+         name = "proteins_batchC") %>%
+addAssayLinkOneToOne(from = "proteins",
+                     to = "proteins_batchC")
+    \end{lstlisting}
+
+
