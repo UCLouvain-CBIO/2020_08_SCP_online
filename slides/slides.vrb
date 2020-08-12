@@ -3,7 +3,6 @@
     Some custom function can be applied to the data set too.
 
     Example: batch correction using \hcode{sva::ComBat}. First, extract the data
-    to correct
 
     \begin{lstlisting}[basicstyle = \scriptsize\ttfamily\color{vdgray}]
 sce <- specht2019v2[["proteins"]]
