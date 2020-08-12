@@ -4,8 +4,8 @@
 
 Standardised and reproducible analysis of mass spectrometry-based single-cell proteomics data
 
-
-(A replication of Specht et al. 2019)
+- Subtitle: 
+Replication of the SCoPE2 analysis by Specht et al. 2019
 
 
 - Speakers: Christophe Vanderaa and Laurent Gatto
