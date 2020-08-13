@@ -62,7 +62,7 @@
 %% ------------
 \title{Standardised and reproducible analysis of mass spectrometry-based 
 single-cell proteomics data}
-% \subtitle{Replication of the SCoPE2 analysis by Specht et al. 2019}
+\subtitle{Replication of the SCoPE2 analysis by Specht et al. 2019}
 % \subtitle{Slides available at: \url{}}
 \author[]{Laurent Gatto, Christophe Vanderaa}
 \date{18 August 2020}
@@ -228,7 +228,7 @@ single-cell proteomics data}
 \begin{frame}[fragile]
     \frametitlesection{Load data}
     
-    Load the SCoPE2 dataset called \hcode{specht2019v2}
+    Load the SCoPE2 dataset called \hcode{specht2019v2}\footnote{\citet{Specht2019-jm}}
     
     \begin{lstlisting}
 library(scpdata)
@@ -648,6 +648,11 @@ addAssayLinkOneToOne(from = "proteins",
 
 \begin{frame}
     \frametitlesection{Acknowledgements}
+
+    \begin{itemize}
+    \item Nikolai Slavov, Harrison Specht, Ed Emmott.
+    \item Fonds National de la Recherche Scientifique (FNRS)
+    \end{itemize}
     
 \end{frame}
 

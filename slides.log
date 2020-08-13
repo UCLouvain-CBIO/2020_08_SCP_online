@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.4.12)  13 AUG 2020 15:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.4.12)  13 AUG 2020 15:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1605,7 +1605,7 @@ Overfull \hbox (0.1893pt too wide) in paragraph at lines 16--17
 
 
 (./slides.vrb
-<figs/medianCV.png, id=594, 466.74374pt x 225.84375pt>
+<figs/medianCV.png, id=596, 466.74374pt x 225.84375pt>
 File: figs/medianCV.png Graphic file (type png)
 <use figs/medianCV.png>
 Package pdftex.def Info: figs/medianCV.png  used on input line 18.
@@ -1642,12 +1642,12 @@ Package pdftex.def Info: figs/QFeatures.pdf  used on input line 14.
 [24
 
 ]
-<figs/Benchmark_pep_venn.pdf, id=758, 289.08pt x 180.675pt>
+<figs/Benchmark_pep_venn.pdf, id=760, 289.08pt x 180.675pt>
 File: figs/Benchmark_pep_venn.pdf Graphic file (type pdf)
 <use figs/Benchmark_pep_venn.pdf>
 Package pdftex.def Info: figs/Benchmark_pep_venn.pdf  used on input line 555.
 (pdftex.def)             Requested size: 153.64493pt x 96.02745pt.
-<figs/Benchmark_prot_venn.pdf, id=759, 289.08pt x 180.675pt>
+<figs/Benchmark_prot_venn.pdf, id=761, 289.08pt x 180.675pt>
 File: figs/Benchmark_prot_venn.pdf Graphic file (type pdf)
 <use figs/Benchmark_prot_venn.pdf>
 Package pdftex.def Info: figs/Benchmark_prot_venn.pdf  used on input line 555.
@@ -1659,12 +1659,12 @@ Package pdftex.def Info: figs/Benchmark_prot_venn.pdf  used on input line 555.
 pdfTeX warning: pdflatex (file ./figs/Benchmark_prot_venn.pdf): PDF inclusion: 
 multiple pdfs with page group included in a single page
 >]
-<figs/Benchmark_pep_err.pdf, id=809, 289.08pt x 180.675pt>
+<figs/Benchmark_pep_err.pdf, id=811, 289.08pt x 180.675pt>
 File: figs/Benchmark_pep_err.pdf Graphic file (type pdf)
 <use figs/Benchmark_pep_err.pdf>
 Package pdftex.def Info: figs/Benchmark_pep_err.pdf  used on input line 566.
 (pdftex.def)             Requested size: 153.64493pt x 96.02745pt.
-<figs/Benchmark_prot_err.pdf, id=810, 289.08pt x 180.675pt>
+<figs/Benchmark_prot_err.pdf, id=812, 289.08pt x 180.675pt>
 File: figs/Benchmark_prot_err.pdf Graphic file (type pdf)
 <use figs/Benchmark_prot_err.pdf>
 Package pdftex.def Info: figs/Benchmark_prot_err.pdf  used on input line 566.
@@ -1676,12 +1676,12 @@ Package pdftex.def Info: figs/Benchmark_prot_err.pdf  used on input line 566.
 pdfTeX warning: pdflatex (file ./figs/Benchmark_prot_err.pdf): PDF inclusion: m
 ultiple pdfs with page group included in a single page
 >]
-<figs/wPCA_SCoPE2.pdf, id=847, 361.35pt x 361.35pt>
+<figs/wPCA_SCoPE2.pdf, id=849, 361.35pt x 361.35pt>
 File: figs/wPCA_SCoPE2.pdf Graphic file (type pdf)
 <use figs/wPCA_SCoPE2.pdf>
 Package pdftex.def Info: figs/wPCA_SCoPE2.pdf  used on input line 583.
 (pdftex.def)             Requested size: 153.64493pt x 153.64615pt.
-<figs/wPCA_scp.pdf, id=848, 361.35pt x 361.35pt>
+<figs/wPCA_scp.pdf, id=850, 361.35pt x 361.35pt>
 File: figs/wPCA_scp.pdf Graphic file (type pdf)
 <use figs/wPCA_scp.pdf>
 Package pdftex.def Info: figs/wPCA_scp.pdf  used on input line 583.
@@ -1695,7 +1695,7 @@ fs with page group included in a single page
 >] (./slides.toc) [28
 
 ]
-<figs/missingness.pdf, id=916, 433.62pt x 505.89pt>
+<figs/missingness.pdf, id=918, 433.62pt x 505.89pt>
 File: figs/missingness.pdf Graphic file (type pdf)
 <use figs/missingness.pdf>
 Package pdftex.def Info: figs/missingness.pdf  used on input line 597.
@@ -1729,22 +1729,22 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 \tf@snm=\write8
 \openout8 = `slides.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 668.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 668.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 673.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 673.
  (./slides.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 668.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 668.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 673.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 673.
 Package rerunfilecheck Info: File `slides.out' has not changed.
 (rerunfilecheck)             Checksum: 4A3C6F17F44CE9A32797278BAA305AEF;284.
  ) 
 Here is how much of TeX's memory you used:
- 24958 strings out of 494847
- 454311 string characters out of 6179080
- 569786 words of memory out of 5000000
- 27593 multiletter control sequences out of 15000+600000
+ 24970 strings out of 494847
+ 454569 string characters out of 6179080
+ 569964 words of memory out of 5000000
+ 27604 multiletter control sequences out of 15000+600000
  93238 words of font info for 84 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 56i,14n,79p,773b,2057s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,14n,79p,773b,2088s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
 ips/lm/lm-mathit.enc}</usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/s
 hare/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/publi
@@ -1756,10 +1756,10 @@ f/fonts/type1/public/lm/lmsso8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt
 s/type1/public/lm/lmtt9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/symbols/msam10.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qhvb.p
 fb></usr/share/texmf/fonts/type1/public/tex-gyre/qhvr.pfb>
-Output written on slides.pdf (33 pages, 1278683 bytes).
+Output written on slides.pdf (33 pages, 1279534 bytes).
 PDF statistics:
- 1119 PDF objects out of 1200 (max. 8388607)
- 1017 compressed objects within 11 object streams
- 76 named destinations out of 1000 (max. 500000)
+ 1121 PDF objects out of 1200 (max. 8388607)
+ 1019 compressed objects within 11 object streams
+ 77 named destinations out of 1000 (max. 500000)
  161 words of extra memory for PDF output out of 10000 (max. 10000000)
 
