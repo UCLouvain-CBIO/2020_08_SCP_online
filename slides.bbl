@@ -1,0 +1,30 @@
+\begin{thebibliography}{3}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Amezquita et~al.(2019)Amezquita, Lun, Becht, Carey, Carpp,
+  Geistlinger, Martini, Rue-Albrecht, Risso, Soneson, Waldron, Pag{\`e}s,
+  Smith, Huber, Morgan, Gottardo, and Hicks]{Amezquita2019-bf}
+Robert~A Amezquita, Aaron T~L Lun, Etienne Becht, Vince~J Carey, Lindsay~N
+  Carpp, Ludwig Geistlinger, Federico Martini, Kevin Rue-Albrecht, Davide
+  Risso, Charlotte Soneson, Levi Waldron, Herv{\'e} Pag{\`e}s, Mike~L Smith,
+  Wolfgang Huber, Martin Morgan, Raphael Gottardo, and Stephanie~C Hicks.
+\newblock Orchestrating single-cell analysis with bioconductor.
+\newblock \emph{Nat. Methods}, pages 1--9, December 2019.
+
+\bibitem[Gatto(2020)]{QFeatures}
+Laurent Gatto.
+\newblock \emph{QFeatures: Quantitative features for mass spectrometry data},
+  2020.
+\newblock URL \url{https://github.com/RforMassSpectrometry/QFeatures}.
+\newblock R package version 0.7.0.
+
+\bibitem[Lun and Risso(2020)]{sce}
+Aaron Lun and Davide Risso.
+\newblock \emph{SingleCellExperiment: S4 Classes for Single Cell Data}, 2020.
+\newblock R package version 1.10.1.
+
+\end{thebibliography}
