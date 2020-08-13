@@ -1,6 +1,0 @@
-\beamer@sectionintoc {1}{Introduction}{2}{0}{1}
-\beamer@sectionintoc {2}{Data framework}{5}{0}{2}
-\beamer@sectionintoc {3}{scp package}{7}{0}{3}
-\beamer@sectionintoc {4}{scp showcase}{18}{0}{4}
-\beamer@sectionintoc {5}{Replication results}{26}{0}{5}
-\beamer@sectionintoc {6}{Conclusion}{31}{0}{6}
