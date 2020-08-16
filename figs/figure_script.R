@@ -1,6 +1,7 @@
 library(export) ## from GitHub:tomwenseleers/export
 library(ggVennDiagram) ## from fork GitHub:cvanderaa/ggVennDiagram
 library(QFeatures)  ## from GitHub:rformassspectrometry/QFeatures
+library(scater)
 library(scp) ## from GitHub:UClouvain-CBIO/scp
 library(scpdata) ## from GitHub:UClouvain-CBIO/scpdata
 library(SingleCellExperiment)
@@ -148,6 +149,43 @@ specht2019v2 %>%
     p2
 graph2pdf(p2, file = "figs/wPCA_scp.pdf", width = 5, height = 5)
 
+
+## Plot PCA: sc proteomics against sc transcriptomics
+## --------------------------------------------------
+
+load("~/PhD/scpdata/data/specht2019v2_withRNA.rda")
+
+## Transfer sample annotation to the protein assay
+specht2019v2 <- transferColDataToAssay(specht2019v2, "proteins") 
+specht2019v2[["proteins"]] %>%
+    ## Perform PCA, see ?runPCA for more info on arguments
+    runPCA(ncomponents = 50, 
+           ntop = Inf, 
+           scale = TRUE, 
+           exprs_values = 1, 
+           name = "PCA") %>%
+    ## Plotting is performed in a single line of code
+    plotPCA(colour_by = "SampleType") +
+    ggtitle("PCA plot on SCP data") ->
+    p
+graph2pdf(p, file = "figs/PCA_scp.pdf", width = 4, height = 3)
+
+specht2019v2[["rna_processed"]] %>%
+    ## Perform PCA, see ?runPCA for more info on arguments
+    runPCA(ncomponents = 50, 
+           ntop = Inf, 
+           scale = TRUE, 
+           exprs_values = 1, 
+           name = "PCA") %>%
+    ## Plotting is performed in a single line of code
+    plotPCA() +
+    ggtitle("PCA plot on scRNA-Seq data") ->
+    p
+graph2pdf(p, file = "figs/PCA_scRnaSeq.pdf", width = 4, height = 3)
+
+## Plot the intensity for a few cells
+## ----------------------------------
+
 data("specht2019v2")
 specht2019v2[,, 1:2]  %>%
     longFormat(colDataCols = "SampleType") %>%
@@ -155,7 +193,7 @@ specht2019v2[,, 1:2]  %>%
     filter(grepl("^M", SampleType)) %>%
     mutate(value = ifelse(is.na(value) | value == 0, 1, value)) %>%
     mutate(primary = paste("Cell", as.numeric(as.factor(primary)))) %>%
-    ggplot(aes(x = value, fill = primary)) +
+    ggplot(aes(x = value, group = primary, col = SampleType)) +
     geom_density(alpha = 0.5, adjust = 0.2) +
     scale_x_log10() +
     theme(text = element_text(size = 14)) +
