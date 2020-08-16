@@ -578,8 +578,32 @@ addAssayLinkOneToOne(from = "proteins",
             \includegraphics[width=\textwidth]{figs/wPCA_scp.pdf}
         \end{column}
     \end{columns}
+\end{frame}
+
+\begin{frame}
+    \frametitlesection{Note about replication }
+    
+    \textbf{Versioning} is essential for replication
+    
+    Example: batch correction using the \hcode{ComBat} algorithm from \hcode{sva}
+    
+    \bigskip 
+    
+    \scriptsize
+    \centering
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \hcode{sva 3.34.0}
+            \includegraphics[width=\textwidth]{figs/CombatOld.png}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \hcode{sva 3.36.0}
+            \includegraphics[width=\textwidth]{figs/CombatNew.png}
+        \end{column}
+    \end{columns}
     
 \end{frame}
+
 
 %-----------------------------------------------
 % Conclusion 
