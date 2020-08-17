@@ -1,29 +1,31 @@
-\frametitlesection{Towards single-cell multi-omics}
+\frametitlesection{Custom functions}
 
-    \hcode{scp} is an ideal framework for combining SCP data with other omics
-    measures. Example: SCP data + scRNA-Seq data.
+    Some custom function can be applied to the data set too.
 
-    \begin{lstlisting}[language = TeX, numbers = none, basicstyle = \tiny\ttfamily\color{vdgray}]
-An instance of class QFeatures containing 180 assays:
- [1] 190222S_LCA9_X_FP94AA: SingleCellExperiment with 2823 rows and 11 columns
- [2] 190222S_LCA9_X_FP94AB: SingleCellExperiment with 4297 rows and 11 columns
- [3] 190222S_LCA9_X_FP94AC: SingleCellExperiment with 4956 rows and 11 columns
- ...
- [178] peptides: SingleCellExperiment with 9208 rows and 1018 columns
- [179] proteins: SingleCellExperiment with 2772 rows and 1018 columns
- [180] rna_processed: SingleCellExperiment with 2205 rows and 1018 columns
+    Example: batch correction using \hcode{sva::ComBat}. First, extract the data
+
+    \begin{lstlisting}[basicstyle = \scriptsize\ttfamily\color{vdgray}]
+sce <- specht2019v2[["proteins"]]
     \end{lstlisting}
 
-    \bigskip
+    Build the correction matrix and apply the ComBat algorithm
 
-    \scriptsize
-    \centering
-    \begin{columns}
-        \begin{column}{0.5\textwidth}
-            \includegraphics[width=\textwidth]{figs/PCA_scp.pdf}
-        \end{column}
-        \begin{column}{0.5\textwidth}
-            \includegraphics[width=\textwidth]{figs/PCA_scRnaSeq.pdf}
-        \end{column}
-    \end{columns}
+    \begin{lstlisting}[basicstyle = \scriptsize\ttfamily\color{vdgray}]
+batch <- colData(sce)$Set
+model <- model.matrix(~ SampleType, data = colData(sce))
+assay(sce) <- ComBat(dat = assay(sce),
+                     batch = batch,
+                     mod = model)
+    \end{lstlisting}
+
+    Add the corrected protein to the dataset and keep feature relationships
+
+    \begin{lstlisting}[basicstyle = \scriptsize\ttfamily\color{vdgray}]
+addAssay(specht2019v2,
+         sce,
+         name = "proteins_batchC") %>%
+addAssayLinkOneToOne(from = "proteins",
+                     to = "proteins_batchC")
+    \end{lstlisting}
+
 

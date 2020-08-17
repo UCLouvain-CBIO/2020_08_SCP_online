@@ -34,8 +34,8 @@
 
 %% Coding fonts
 %% ------------
-%% Font for R chunks 
-\usepackage{listings} 
+%% Font for R chunks
+\usepackage{listings}
 \lstset{
   language=R,
   basicstyle=\footnotesize\ttfamily\color{vdgray}, % the size of the fonts that are used for the code
@@ -60,32 +60,32 @@
 
 %% Presentation metadata
 %% ------------
-\title{Standardised and reproducible analysis of mass spectrometry-based 
+\title{Standardised and reproducible analysis of mass spectrometry-based
 single-cell proteomics data}
 \subtitle{Replication of the SCoPE2 analysis by Specht et al. 2019}
 % \subtitle{Slides available at: \url{}}
-\author[]{Laurent Gatto, Christophe Vanderaa}
+\author[]{Christophe Vanderaa, Laurent Gatto}
 \date{18 August 2020}
 \institute[]{Computational Biology Unit (CBIO), de Duve Institute, UCLouvain}
 
 \begin{document}
-    
+
 \pdfinfo {/Author(Laurent Gatto - UCLouvain)}
-    
+
 %-----------------------------------------------
 % Abstract
 %-----------------------------------------------
-        
+
 %% Abstract: Recent advances in sample preparation, processing and mass
 %% spectrometry (MS) have allowed the emergence of MS-based single-cell
 %% proteomics (SCP). We present a robust and standardized workflow to reproduce
 %% the data analysis of SCoPE2, one of the pioneering works in the field
-%% developed by the Slavov Lab. The implementation uses well-defined 
+%% developed by the Slavov Lab. The implementation uses well-defined
 %% Bioconductor classes that provide powerful tools for single-cell RNA
 %% sequencing and for MS-based proteomics. We demonstrate that our pipeline can
 %% reproduce the SCoPE2 analysis using only a few lines of code.
 
-% Apply the 'remember picture' style to all pictures that defines or uses 
+% Apply the 'remember picture' style to all pictures that defines or uses
 % external nodes
 \tikzstyle{every picture}+=[remember picture]
 
@@ -103,7 +103,6 @@ single-cell proteomics data}
 
 
 \AtBeginSection[]{
-  \setbeamercolor{background canvas}{bg=cyan}
   \setbeamercolor{section in toc}{fg=black}
   \setbeamerfont{section in toc}{size=\large}
 
@@ -128,21 +127,39 @@ single-cell proteomics data}
 \section{Introduction}
 
 \begin{frame}
-    \frametitlesection{State of the art in MS-SCP}
+  \frametitlesection{The value of replication}
 
-    MS-SCP: Mass spectrometry-based single-cell proteomics 
-    
-    MS-SCP consist of shotgun proteomics at single-cell level 
-    
+  \begin{itemize}
+  \item \textbf{Computational} reproducibility.
+  \item Can we trust results that can't be reproduced?
+  \item Replication isn't a guarantee for accuracy, but the lack
+    of replicability is all but not a sign thereof.
+  \item \textbf{Reproduction-based development} Development isn't done
+    in isolation: agreement between the developer, the data producer
+    and the user.
+  \item Replication is the first step to define sound data
+    infrastructure and principled analysis.
+  \end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitlesection{Why SCoPE2 (but not only)}
+
     \begin{itemize}
         \item{SCoPE2 quantifies thousands of proteins x thousands single-cells}
         \item{Full protocole available}
         \item{Full analysis script available}
     \end{itemize}
-    
-    \textbf{BUT}
-    
-    Lack of standardized analysis software
+
+    \begin{itemize}
+      \item Contribute a standardized and principles data and analysis
+        that is broadly applicable.
+      \item Reproducible computational infrastructure to further
+        improve data analysis and interpretation.
+    \end{itemize}
+
 \end{frame}
 
 \begin{frame}
@@ -156,42 +173,41 @@ single-cell proteomics data}
         \item{Modularity: integrate other software packages}
         \item{Promote reproducibility}
         \item{Platform-independent}
-        \item{Free of charge}
     \end{itemize}
-    
+
     R/Bioconductor is an ideal environment
-    
+
 \end{frame}
 
 
 %-----------------------------------------------
-% scp package 
+% scp package
 %-----------------------------------------------
 
 \section{scp package}
 
 \begin{frame}
     \frametitlesection{Data infrastructure: QFeatures\footnote{\citet{QFeatures}}}
-    
+
     \centering
     \begin{columns}
         \begin{column}{0.8\textwidth}
-            \hcode{QFeatures}: data framework dedicated to manipulate and process 
-            MS-based quantitative data. 
+            \hcode{QFeatures}: data framework dedicated to manipulate and process
+            MS-based quantitative data.
         \end{column}
         \begin{column}{0.2\textwidth}
             \includegraphics[width=\linewidth]{figs/sticker_QFeatures.png}
         \end{column}
-        
+
     \end{columns}
-    
+
     \bigskip
-    
+
     \begin{tikzpicture}
     \node<1> (img1) {\includegraphics[width=0.8\linewidth]{figs/QFeatures.pdf}};
     \node<2> (img2) {\includegraphics[width=0.8\linewidth]{figs/QFeatures_data.pdf}};
   \end{tikzpicture}
-    
+
 \end{frame}
 
 
@@ -200,16 +216,16 @@ single-cell proteomics data}
     \frametitlesection{Data infrastructure: SingleCellExperiment\footnote{\citet{sce}}$^,$\footnote{\citet{Amezquita2019-bf}}}
     \begin{columns}
         \begin{column}{0.8\textwidth}
-            \hcode{SingleCellExperiment}: provides dedicated framework for 
+            \hcode{SingleCellExperiment}: provides dedicated framework for
             single-cell data analysis.
         \end{column}
         \begin{column}{0.2\textwidth}
             \includegraphics[width=\linewidth]{figs/sticker_SingleCellExperiment.png}
-        \end{column}  
+        \end{column}
     \end{columns}
-    
+
     \includegraphics[width=0.9\linewidth]{figs/SingleCellExperiment.png}
-    
+
 \end{frame}
 
 
@@ -222,25 +238,25 @@ single-cell proteomics data}
         \includegraphics[width=\linewidth]{figs/SCP_framework.pdf}
     \end{figure}
 
-    
+
 \end{frame}
 
 \begin{frame}[fragile]
     \frametitlesection{Load data}
-    
+
     Load the SCoPE2 dataset called \hcode{specht2019v2}\footnote{\citet{Specht2019-jm}}
-    
+
     \begin{lstlisting}
 library(scpdata)
 data("specht2019v2")
     \end{lstlisting}
-    
+
     Dataset overview
-    
+
     \begin{lstlisting}
 show(specht2019v2)
     \end{lstlisting}
-    
+
     \begin{lstlisting}[language = TeX, numbers = none, basicstyle = \tiny\ttfamily\color{vdgray}]
 An instance of class QFeatures containing 179 assays:
  [1] 190222S_LCA9_X_FP94AA: SingleCellExperiment with 2823 rows and 11 col...
@@ -251,65 +267,65 @@ An instance of class QFeatures containing 179 assays:
  [178] peptides: SingleCellExperiment with 9208 rows and 1018 columns
  [179] proteins: SingleCellExperiment with 2772 rows and 1018 columns
     \end{lstlisting}
-    
+
     \bigskip
     \footnotesize
-    
+
     Tabular data (such as generated from MaxQuant, ProteomeDiscoverer,
     ...) can be read using the \hcode{readSCP()} function.
-    
+
 \end{frame}
 
 
 \begin{frame}[fragile]
     \frametitlesection{Metadata}
-    
+
     \hcode{colData} stores sample metadata for \textbf{all assays} in one table
-    
-    \begin{table}[!htbp] 
+
+    \begin{table}[!htbp]
         \makebox[\textwidth]{ % For centering because table is too large
-        \centering 
+        \centering
         \scriptsize
         \noindent
-        \begin{tabular}{@{\extracolsep{5pt}} cccccc} 
-\\[-1.8ex]\hline 
-\hline \\[-1.8ex] 
-Set & Channel & SampleType & lcbatch & sortday & digest \\ 
-\hline \\[-1.8ex] 
-190222S\_LCA9\_X\_FP94AA & RI1 & Carrier & LCA9 & s8 & N \\ 
-190222S\_LCA9\_X\_FP94AA & RI2 & Reference & LCA9 & s8 & N \\ 
-190222S\_LCA9\_X\_FP94AA & RI3 & Unused & LCA9 & s8 & N \\ 
-190222S\_LCA9\_X\_FP94AA & RI4 & Macrophage & LCA9 & s8 & N \\ 
-190222S\_LCA9\_X\_FP94AA & RI5 & Macrophage & LCA9 & s8 & N \\ 
-190222S\_LCA9\_X\_FP94AA & RI6 & Macrophage & LCA9 & s8 & N \\ 
+        \begin{tabular}{@{\extracolsep{5pt}} cccccc}
+\\[-1.8ex]\hline
+\hline \\[-1.8ex]
+Set & Channel & SampleType & lcbatch & sortday & digest \\
+\hline \\[-1.8ex]
+190222S\_LCA9\_X\_FP94AA & RI1 & Carrier & LCA9 & s8 & N \\
+190222S\_LCA9\_X\_FP94AA & RI2 & Reference & LCA9 & s8 & N \\
+190222S\_LCA9\_X\_FP94AA & RI3 & Unused & LCA9 & s8 & N \\
+190222S\_LCA9\_X\_FP94AA & RI4 & Macrophage & LCA9 & s8 & N \\
+190222S\_LCA9\_X\_FP94AA & RI5 & Macrophage & LCA9 & s8 & N \\
+190222S\_LCA9\_X\_FP94AA & RI6 & Macrophage & LCA9 & s8 & N \\
 ... & ... & ... & ... & ... & ... \\
-\hline \\[-1.8ex] 
-        \end{tabular} 
+\hline \\[-1.8ex]
+        \end{tabular}
         }
     \end{table}
 \end{frame}
 
 \begin{frame}[fragile]
     \frametitlesection{Analysis workflow}
-    
+
     \scriptsize
-    
+
     \begin{enumerate}
         \item Load data
     \end{enumerate}
-    
+
     \textbf{PSM data}
-    
+
     \begin{lstlisting}[language = TeX, numbers = none, basicstyle = \ttfamily\@setfontsize{\srcsize}{5pt}{5pt}\color{vdgray}]
- [1] 190222S_LCA9_X_FP94AA: SingleCellExperiment with 2823 rows and 11 columns 
- [2] 190222S_LCA9_X_FP94AB: SingleCellExperiment with 4297 rows and 11 columns 
- [3] 190222S_LCA9_X_FP94AC: SingleCellExperiment with 4956 rows and 11 columns 
+ [1] 190222S_LCA9_X_FP94AA: SingleCellExperiment with 2823 rows and 11 columns
+ [2] 190222S_LCA9_X_FP94AB: SingleCellExperiment with 4297 rows and 11 columns
+ [3] 190222S_LCA9_X_FP94AC: SingleCellExperiment with 4956 rows and 11 columns
  ...
  [177] 191110S_LCB7_X_APNOV16plex2_Set_9: SingleCellExperiment with 4626 rows and 16 columns
     \end{lstlisting}
-    
+
     \pause
-    
+
     \begin{enumerate}
         \setcounter{enumi}{1}
         \item \textbf<4>{PSM filtering}
@@ -320,15 +336,15 @@ Set & Channel & SampleType & lcbatch & sortday & digest \\
         \item \textbf<4>{Removal of highly missing peptides}
         \item \textbf<4>{Log-transformation}
     \end{enumerate}
-    
+
     \textbf{Peptide data}
-    
+
     \begin{lstlisting}[language = TeX, numbers = none, basicstyle = \ttfamily\@setfontsize{\srcsize}{5pt}{5pt}\color{vdgray}]
  [178] peptides: SingleCellExperiment with 9208 rows and 1018 columns
     \end{lstlisting}
-    
+
     \pause
-    
+
     \begin{enumerate}
         \setcounter{enumi}{8}
         \item \textbf<4>{Peptides to proteins aggregation}
@@ -336,14 +352,14 @@ Set & Channel & SampleType & lcbatch & sortday & digest \\
         \item Imputation
         \item \textbf<4>{Batch correction}
     \end{enumerate}
-    
+
     \textbf{Peptide data}
-    
+
     \begin{lstlisting}[language = TeX, numbers = none, basicstyle = \ttfamily\@setfontsize{\srcsize}{5pt}{5pt}\color{vdgray}]
  [179] proteins: SingleCellExperiment with 2772 rows and 1018 columns
     \end{lstlisting}
-    
-    
+
+
 \end{frame}
 
 %-----------------------------------------------
@@ -354,48 +370,48 @@ Set & Channel & SampleType & lcbatch & sortday & digest \\
 
 \begin{frame}[fragile]
     \frametitlesection{PSM filtering}
-    
+
     Filter out features based on the feature metadata
-    
+
     \bigskip
-    
-    Example: filter out reverse hits. The filter is applied to the 
+
+    Example: filter out reverse hits. The filter is applied to the
     \hcode{Reverse} field in the feature metadata
 
     \begin{lstlisting}
-filterFeatures(specht2019v2, 
+filterFeatures(specht2019v2,
                ~ Reverse != "+")
     \end{lstlisting}
-    
+
     Source code in \hcode{QFeatures}
 \end{frame}
 
 \begin{frame}[fragile]
     \frametitlesection{QC metrics (1)}
     \small
-    Interesting metrics for MS-SCP quality control: 
-    
+    Interesting metrics for MS-SCP quality control:
+
     \begin{itemize}
-        \item{Sample to carrier ratio}: ratio of the carrier channel intensity 
+        \item{Sample to carrier ratio}: ratio of the carrier channel intensity
         signal over the sample channel intensity
-        \item{Peptide FDR\footnote{false discovery rate}: expected rate of 
+        \item{Peptide FDR\footnote{false discovery rate}: expected rate of
         wrongly assigned features to a given peptide}
-        \item{Cell median CV\footnote{coefficient of variation}: reliability of 
+        \item{Cell median CV\footnote{coefficient of variation}: reliability of
         the protein quantification summarized over each cell.}
     \end{itemize}
-    
+
     Example:
 
     \begin{lstlisting}
 computeMedianCV(specht2019v2,
-                i = "peptides", 
-                proteinCol = "protein", 
-                peptideCol = "peptide", 
+                i = "peptides",
+                proteinCol = "protein",
+                peptideCol = "peptide",
                 batchCol = "Set")
     \end{lstlisting}
-    
+
     Source code in \hcode{scp}
-    
+
 \end{frame}
 
 
@@ -403,18 +419,18 @@ computeMedianCV(specht2019v2,
     \frametitlesection{QC metrics (2)}
 
     QC metrics are stored in the data set for plotting or subsetting
-    
+
     \begin{lstlisting}[basicstyle = \scriptsize\ttfamily\color{vdgray}]
 library(tidyverse)
 specht2019v2[["peptides"]] %>%
   colData %>%
   data.frame %>%
-  ggplot(aes(x = MedianCV, 
+  ggplot(aes(x = MedianCV,
              fill = SampleType)) +
   geom_histogram() +
   geom_vline(xintercept = 0.4)
     \end{lstlisting}
-    
+
     \begin{figure}
         \centering
         \includegraphics[width=.7\linewidth]{figs/medianCV.png}
@@ -423,14 +439,14 @@ specht2019v2[["peptides"]] %>%
 
 \begin{frame}[fragile]
     \frametitlesection{Feature aggregation}
-    
+
     \begin{columns}
         \begin{column}{0.6\textwidth}
             Feature aggregation includes 2 steps:
             \begin{itemize}
-                \item{Combine the quantiative data from multiple features to a 
+                \item{Combine the quantiative data from multiple features to a
                 single aggregated features}
-                \item{Store the relationship between the parent features and the 
+                \item{Store the relationship between the parent features and the
                 aggregated features}
             \end{itemize}
         \end{column}
@@ -438,94 +454,94 @@ specht2019v2[["peptides"]] %>%
             \includegraphics[width=\textwidth]{figs/QFeatures.pdf}
         \end{column}
     \end{columns}
-    
+
     \bigskip
-    
+
     Example: aggregate peptides to proteins
-    
+
     \begin{lstlisting}
 aggregateFeatures(specht2019v2,
                   i = "peptides",
-                  name = "proteins", 
-                  fcol = "protein", 
+                  name = "proteins",
+                  fcol = "protein",
                   fun = colMedians, na.rm = TRUE)
     \end{lstlisting}
-    
+
     Source code in \hcode{QFeatures}
-    
+
 \end{frame}
 
 
 \begin{frame}[fragile]
     \frametitlesection{Managing missingness}
-    
-    \hcode{0}'s can be either \textbf{biological} or \textbf{technical} zero. 
+
+    \hcode{0}'s can be either \textbf{biological} or \textbf{technical} zero.
     They are better relaced by \hcode{NA}'s.
-    
+
     \begin{lstlisting}
 zeroIsNA(specht2019v2,
          i = "peptides")
     \end{lstlisting}
-    
+
     Features containing too many missing data (e.g. >= 99 \%) should be removed
-    
+
     \begin{lstlisting}
-filterNA(specht2019v2, 
-         i = "peptides", 
+filterNA(specht2019v2,
+         i = "peptides",
          pNA = 0.99)
     \end{lstlisting}
-    
+
     Source code in \hcode{QFeatures}
-    
+
 \end{frame}
 
 \begin{frame}[fragile]
     \frametitlesection{Data transformation}
-    
+
     Common data transformation can easily be applied:
-    
+
     \begin{itemize}
         \item{Normalization}
         \item{Log-transformation}
         \item{Imputation}
     \end{itemize}
-    
+
     Example: $log_2$-transformation:
-    
+
     \begin{lstlisting}
-logTransform(specht2019v2, 
-             i = "peptides", 
+logTransform(specht2019v2,
+             i = "peptides",
              base = 2,
              name = "peptides_log")
     \end{lstlisting}
-    
+
     Source code in \hcode{QFeatures}
-    
+
 \end{frame}
 
 \begin{frame}[fragile]
     \frametitlesection{Custom functions}
-    
-    Some custom function can be applied to the data set too. 
-    
+
+    Some custom function can be applied to the data set too.
+
     Example: batch correction using \hcode{sva::ComBat}. First, extract the data
-    
+
     \begin{lstlisting}[basicstyle = \scriptsize\ttfamily\color{vdgray}]
 sce <- specht2019v2[["proteins"]]
     \end{lstlisting}
-    
+
     Build the correction matrix and apply the ComBat algorithm
-    
+
     \begin{lstlisting}[basicstyle = \scriptsize\ttfamily\color{vdgray}]
 batch <- colData(sce)$Set
 model <- model.matrix(~ SampleType, data = colData(sce))
-assay(sce) <- ComBat(dat = assay(sce), 
-                     batch = batch, 
+assay(sce) <- ComBat(dat = assay(sce),
+                     batch = batch,
                      mod = model)
     \end{lstlisting}
-    
+
     Add the corrected protein to the dataset and keep feature relationships
-    
+
     \begin{lstlisting}[basicstyle = \scriptsize\ttfamily\color{vdgray}]
 addAssay(specht2019v2,
          sce,
@@ -533,8 +549,8 @@ addAssay(specht2019v2,
 addAssayLinkOneToOne(from = "proteins",
                      to = "proteins_batchC")
     \end{lstlisting}
-    
-    
+
+
 \end{frame}
 
 %-----------------------------------------------
@@ -545,30 +561,30 @@ addAssayLinkOneToOne(from = "proteins",
 
 \begin{frame}
     \frametitlesection{Selected features}
-    
+
     \centering
     \textbf{Peptides} \\
     \includegraphics[width=0.5\textwidth]{figs/Benchmark_pep_venn.pdf} \\
     \textbf{Proteins}\\
     \includegraphics[width=0.5\textwidth]{figs/Benchmark_prot_venn.pdf}
-    
+
 \end{frame}
 
 \begin{frame}
     \frametitlesection{Numerical comparison}
-    
+
     \centering
     \textbf{Peptides} \\
     \includegraphics[width=0.5\textwidth]{figs/Benchmark_pep_err.pdf} \\
     \textbf{Proteins}\\
     \includegraphics[width=0.5\textwidth]{figs/Benchmark_prot_err.pdf}
-    
+
 \end{frame}
 
 
 \begin{frame}
     \frametitlesection{Replicate weighted PCA}
-    
+
     \begin{columns}
         \begin{column}{0.5\textwidth}
             \textbf{SCoPE2}
@@ -583,13 +599,13 @@ addAssayLinkOneToOne(from = "proteins",
 
 \begin{frame}
     \frametitlesection{Note about replication }
-    
+
     \textbf{Versioning} is essential for replication
-    
+
     Example: batch correction using the \hcode{ComBat} algorithm from \hcode{sva}
-    
-    \bigskip 
-    
+
+    \bigskip
+
     \scriptsize
     \centering
     \begin{columns}
@@ -602,70 +618,51 @@ addAssayLinkOneToOne(from = "proteins",
             \includegraphics[width=\textwidth]{figs/CombatNew.png}
         \end{column}
     \end{columns}
-    
-\end{frame}
 
-\begin{frame}[fragile]
-    \frametitlesection{Towards single-cell multi-omics}
-    
-    \hcode{scp} is an ideal framework for combining SCP data with other omics 
-    measures. Example: SCP data + scRNA-Seq data.
-    
-    \begin{lstlisting}[language = TeX, numbers = none, basicstyle = \tiny\ttfamily\color{vdgray}]
-An instance of class QFeatures containing 180 assays:
- [1] 190222S_LCA9_X_FP94AA: SingleCellExperiment with 2823 rows and 11 columns 
- [2] 190222S_LCA9_X_FP94AB: SingleCellExperiment with 4297 rows and 11 columns 
- [3] 190222S_LCA9_X_FP94AC: SingleCellExperiment with 4956 rows and 11 columns 
- ...
- [178] peptides: SingleCellExperiment with 9208 rows and 1018 columns 
- [179] proteins: SingleCellExperiment with 2772 rows and 1018 columns 
- [180] rna_processed: SingleCellExperiment with 2205 rows and 1018 columns 
-    \end{lstlisting}
-    
-    \bigskip 
-    
-    \scriptsize
-    \centering
-    \begin{columns}
-        \begin{column}{0.5\textwidth}
-            \includegraphics[width=\textwidth]{figs/PCA_scp.pdf}
-        \end{column}
-        \begin{column}{0.5\textwidth}
-            \includegraphics[width=\textwidth]{figs/PCA_scRnaSeq.pdf}
-        \end{column}
-    \end{columns}
-    
 \end{frame}
 
 
 %-----------------------------------------------
-% Conclusion 
+% Conclusion
 %-----------------------------------------------
 
 \section{Conclusion}
 
+
 \begin{frame}
-    \frametitlesection{Missingness}
-    
-    \centering
-    \includegraphics[width=.7\linewidth]{figs/missingness.pdf}
-    
+  \begin{itemize}
+  \item MS-based single cell proteomics: young field, with many
+    challenges and great progess. \hcode{scp} to address the need for
+    principled and reproducible data analysis.
+  \item \hcode{scp} isn't specific to SCoPE2/TMT data, applicable to
+    other LF protocols such as nanoPOTS (\citet{Williams2020-nv,Cong2020-kh}).
+  \item \hcode{scp} and \hcode{SingleCellExperiment}: same
+    infrastructure for single cell proteomics and RNA sequencing.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  %% modelling
+    \frametitlesection{Future directions}
+    \includegraphics[width=.5\linewidth]{figs/PSM_intensity.pdf}
+    \includegraphics[width=.4\linewidth]{figs/missingness.pdf}
+
 \end{frame}
 
 \begin{frame}
     \frametitlesection{Take home message}
-    
+
     \begin{itemize}
-        \item{\hcode{scp} package suite provides a standardized environment for 
+        \item{\hcode{scp} package suite provides a standardized environment for
         performing MS-SCP data analysis}
-        \item{Flexibly reproduce existing analyses from different groups or 
+        \item{Flexibly reproduce existing analyses from different groups or
         protocoles (multiplex vs label free)}
     \end{itemize}
-    
+
     \bigskip
-    
+
     Advantages:
-    
+
     \begin{itemize}
         \item{Allow automation of the analysis}
         \item{Facilitate new computational developments}
@@ -673,33 +670,30 @@ An instance of class QFeatures containing 180 assays:
         \item{Increases field visibility}
         \item{Include other modalities: scRNA-Seq, ATAC-Seq, etc}
     \end{itemize}
-    
+
 \end{frame}
 
 \begin{frame}
     \frametitlesection{Resources}
-    
+
     \textbf{Packages}
-    
+
     \begin{itemize}
         \item{\hcode{scp}: GitHub repository \hcode{UClouvain-CBIO/scp}}
         \item{\hcode{scpdata}: coming soon
         \item{\hcode{QFeatures}: GitHub repository \hcode{rformassspectrometry/QFeatures}}
         \item{\hcode{SingleCellExperiment}: Bioconductor}}
     \end{itemize}
-    
+
     \bigskip
-    
-    \textbf{SCoPE2 reproduction vignette}
-    
-    Available at...
-    
+
+
     \bigskip
-    
+
     \textbf{Slides and source code}
-    
+
     Available at...
-    
+
 \end{frame}
 
 \begin{frame}
@@ -709,7 +703,7 @@ An instance of class QFeatures containing 180 assays:
     \item Nikolai Slavov, Harrison Specht, Ed Emmott.
     \item Fonds National de la Recherche Scientifique (FNRS)
     \end{itemize}
-    
+
 \end{frame}
 
 
