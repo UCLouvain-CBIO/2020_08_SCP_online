@@ -214,7 +214,7 @@ single-cell proteomics data}
 
 
 \begin{frame}
-    \frametitlesection{Data infrastructure (3)}
+    \frametitlesection{Data infrastructure: scp}
 
     \hcode{scp} = \hcode{SingleCellExperiment} + \hcode{QFeatures}
     \begin{figure}
@@ -255,8 +255,8 @@ An instance of class QFeatures containing 179 assays:
     \bigskip
     \footnotesize
     
-    Tabular data (such as generated from MaxQuant, ProteomeDiscoverer,
-    ...) can be read using the \hcode{readSCP()} function.
+    Tabular data (generated from MaxQuant, ProteomeDiscoverer,
+    ...) can be converted to `hcode{QFeatures} using the \hcode{readSCP()} function.
     
 \end{frame}
 
@@ -264,7 +264,7 @@ An instance of class QFeatures containing 179 assays:
 \begin{frame}[fragile]
     \frametitlesection{Metadata}
     
-    \hcode{colData} stores sample metadata for \textbf{all assays} in one table
+    The metadata of \textbf{all assays} are stored in a single table
     
     \begin{table}[!htbp] 
         \makebox[\textwidth]{ % For centering because table is too large
@@ -315,6 +315,7 @@ Set & Channel & SampleType & lcbatch & sortday & digest \\
         \item \textbf<4>{PSM filtering}
         \item Expression channel by reference channel division
         \item PSM to peptides aggregating
+        \item Combine sets
         \item \textbf<4>{Single cells filtering based on median CV}
         \item Normalization
         \item \textbf<4>{Removal of highly missing peptides}
@@ -337,7 +338,7 @@ Set & Channel & SampleType & lcbatch & sortday & digest \\
         \item \textbf<4>{Batch correction}
     \end{enumerate}
     
-    \textbf{Peptide data}
+    \textbf{Protein data}
     
     \begin{lstlisting}[language = TeX, numbers = none, basicstyle = \ttfamily\@setfontsize{\srcsize}{5pt}{5pt}\color{vdgray}]
  [179] proteins: SingleCellExperiment with 2772 rows and 1018 columns
@@ -352,8 +353,9 @@ Set & Channel & SampleType & lcbatch & sortday & digest \\
 
 \section{scp showcase}
 
+
 \begin{frame}[fragile]
-    \frametitlesection{PSM filtering}
+    \frametitlesection{Data filtering}
     
     Filter out features based on the feature metadata
     
@@ -371,15 +373,15 @@ filterFeatures(specht2019v2,
 \end{frame}
 
 \begin{frame}[fragile]
-    \frametitlesection{QC metrics (1)}
+    \frametitlesection{Data filtering: compute QC metrics}
     \small
-    Interesting metrics for MS-SCP quality control: 
+    Some QC metrics are not compued by MaxQuant: 
     
     \begin{itemize}
-        \item{Sample to carrier ratio}: ratio of the carrier channel intensity 
-        signal over the sample channel intensity
-        \item{Peptide FDR\footnote{false discovery rate}: expected rate of 
-        wrongly assigned features to a given peptide}
+        \item{Sample to carrier ratio}: discard samples with intensities higher 
+        than expected
+        \item{Peptide FDR\footnote{false discovery rate}: expected proportion of 
+        features wrongly assigned to a given peptide}
         \item{Cell median CV\footnote{coefficient of variation}: reliability of 
         the protein quantification summarized over each cell.}
     \end{itemize}
@@ -400,7 +402,7 @@ computeMedianCV(specht2019v2,
 
 
 \begin{frame}[fragile]
-    \frametitlesection{QC metrics (2)}
+    \frametitlesection{Data filtering: plot QC metrics}
 
     QC metrics are stored in the data set for plotting or subsetting
     
@@ -426,22 +428,24 @@ specht2019v2[["peptides"]] %>%
     
     \begin{columns}
         \begin{column}{0.6\textwidth}
-            Feature aggregation includes 2 steps:
-            \begin{itemize}
-                \item{Combine the quantiative data from multiple features to a 
-                single aggregated features}
-                \item{Store the relationship between the parent features and the 
-                aggregated features}
-            \end{itemize}
+            Feature aggregation = combine features into a higher-level structure. 
+            
+            \bigskip
+    
+            Example: aggregate peptides to proteins
+    
         \end{column}
-        \begin{column}{0.4\textwidth}
+        \begin{column}{0.35\textwidth}
             \includegraphics[width=\textwidth]{figs/QFeatures.pdf}
         \end{column}
     \end{columns}
     
-    \bigskip
-    
-    Example: aggregate peptides to proteins
+    \begin{itemize}
+                \item{Combine the quantitative data from multiple peptides to a 
+                single protein}
+                \item{Store the relationship between the protein and the 
+                aggregated peptides}
+            \end{itemize}
     
     \begin{lstlisting}
 aggregateFeatures(specht2019v2,
@@ -467,7 +471,7 @@ zeroIsNA(specht2019v2,
          i = "peptides")
     \end{lstlisting}
     
-    Features containing too many missing data (e.g. >= 99 \%) should be removed
+    Remove highly-missing features (e.g. >= 99 \%)
     
     \begin{lstlisting}
 filterNA(specht2019v2, 
@@ -506,32 +510,34 @@ logTransform(specht2019v2,
 \begin{frame}[fragile]
     \frametitlesection{Custom functions}
     
-    Some custom function can be applied to the data set too. 
+    \textbf{Custom function} can be applied to the data set. It requires a 
+    three-step procedure:
     
-    Example: batch correction using \hcode{sva::ComBat}. First, extract the data
+    \begin{enumerate}
+        \item Extract the assay data to process
+    \end{enumerate}
     
     \begin{lstlisting}[basicstyle = \scriptsize\ttfamily\color{vdgray}]
-sce <- specht2019v2[["proteins"]]
+x <- specht2019v2[["proteins"]]
     \end{lstlisting}
     
-    Build the correction matrix and apply the ComBat algorithm
+    \begin{enumerate}
+        \setcounter{enumi}{1}
+        \item Apply the custom function, for example batch correction using 
+        `ComBat`
+    \end{enumerate}
     
-    \begin{lstlisting}[basicstyle = \scriptsize\ttfamily\color{vdgray}]
-batch <- colData(sce)$Set
-model <- model.matrix(~ SampleType, data = colData(sce))
-assay(sce) <- ComBat(dat = assay(sce), 
-                     batch = batch, 
-                     mod = model)
+    \begin{lstlisting}[firstnumber=2,  basicstyle = \scriptsize\ttfamily\color{vdgray}]
+assay(x) <- ComBat(assay(x), ...)
     \end{lstlisting}
     
-    Add the corrected protein to the dataset and keep feature relationships
+    \begin{enumerate}
+        \setcounter{enumi}{2}
+        \item Insert the processed assay as a new data assay
+    \end{enumerate}
     
-    \begin{lstlisting}[basicstyle = \scriptsize\ttfamily\color{vdgray}]
-addAssay(specht2019v2,
-         sce,
-         name = "proteins_batchC") %>%
-addAssayLinkOneToOne(from = "proteins",
-                     to = "proteins_batchC")
+    \begin{lstlisting}[firstnumber=3,  basicstyle = \scriptsize\ttfamily\color{vdgray}]
+addAssay(specht2019v2, x, name = "proteins_batch_corrected")
     \end{lstlisting}
     
     

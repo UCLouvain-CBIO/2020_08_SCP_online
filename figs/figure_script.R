@@ -4,14 +4,13 @@ library(QFeatures)  ## from GitHub:rformassspectrometry/QFeatures
 library(scp) ## from GitHub:UClouvain-CBIO/scp
 library(scpdata) ## from GitHub:UClouvain-CBIO/scpdata
 library(SingleCellExperiment)
-data("specht2019v2")
-data(hlpsms)
 setwd("~/PhD/2020_08_SCP_online/")
 
 ## QFeatures demo figure
 ## ---------------------
 
 ## Prepare the data 
+data(hlpsms)
 hl <- readQFeatures(hlpsms, ecol = 1:10, name = "psms")
 hl <- aggregateFeatures(hl, "psms", "Sequence", name = "peptides", fun = colMeans)
 hl <- aggregateFeatures(hl, "peptides", "ProteinGroupAccessions", name = "proteins", fun = colMeans)
@@ -43,12 +42,38 @@ graph2pdf(p, file = "figs/QFeatures_data.pdf", width = 8, height = 4)
 ## Export colData table 
 ## --------------------
 
+data("specht2019v2")
+
 colData(specht2019v2) %>%
     data.frame %>%
     select(-SampleAnnotation) %>%
     as_tibble ->
     cd
 table2tex(cd[1:6, ], file = "colData.tex", standAlone = FALSE)
+
+## PSM filtering 
+## -------------
+
+load("../scpScripts/20200525-specht2019v2-replication/data/vignette_final.RData")
+
+computeSCR(specht2019v2,
+           i = 1:5,
+           colDataCol = "SampleType",
+           carrierPattern = "Carrier",
+           samplePattern = ".") ->
+    specht2019v2    
+
+library(tidyverse)
+specht2019v2 %>%
+    rowDataToDF(i = 1:5, vars = "meanSCR") %>%
+    data.frame %>%
+    ggplot(aes(x = meanSCR)) +
+    geom_histogram() +
+    scale_x_log10() +
+    geom_vline(xintercept = 0.1) ->
+    p
+graph2pdf(p, file = "figs/meanSCR.pdf", width = 5, height = 2.5)
+
 
 
 ## Benchmark the data replication 
@@ -125,28 +150,24 @@ plotwPCA <- function(sce) {
         ## Annotate plot
         xlab(paste0("PC1 (", pcaPercentVar[1], "%)")) +
         ylab(paste0("PC2 (", pcaPercentVar[2], "%)")) +
-        ggtitle("PCA plot of the processed protein data") +
         ## Adapt the visual style to match the preprint figure
-        # scale_color_manual(name = "", values = c("#048ABF","#FF5733"), 
-        #                    labels = c("Macrophages", "Monocytes")) +
+        scale_color_manual(name = "", values = c("#048ABF","#FF5733"),
+                           labels = c("Macrophages", "Monocytes")) +
         theme_minimal() +
         theme(legend.position = "top")
 }
 
 
-plotwPCA(proteins) +
-    scale_color_manual(name = "", values = c("#048ABF","#FF5733"), 
-                       labels = c("Macrophages", "Monocytes")) ->
-
+plotwPCA(proteins) ->
     p1
-graph2pdf(p1, file = "figs/wPCA_SCoPE2.pdf", width = 5, height = 5)
+graph2pdf(p1, file = "figs/wPCA_SCoPE2.pdf", width = 4, height = 4)
 
 specht2019v2 %>%
     transferColDataToAssay("proteins_batchC") %>%
     .[["proteins_batchC"]] %>%
     plotwPCA ->
     p2
-graph2pdf(p2, file = "figs/wPCA_scp.pdf", width = 5, height = 5)
+graph2pdf(p2, file = "figs/wPCA_scp.pdf", width = 4, height = 4)
 
 data("specht2019v2")
 specht2019v2[,, 1:2]  %>%
