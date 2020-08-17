@@ -2,4 +2,4 @@
 \beamer@sectionintoc {2}{scp package}{5}{0}{2}
 \beamer@sectionintoc {3}{scp showcase}{16}{0}{3}
 \beamer@sectionintoc {4}{Replication results}{24}{0}{4}
-\beamer@sectionintoc {5}{Conclusion}{29}{0}{5}
+\beamer@sectionintoc {5}{Conclusion}{30}{0}{5}
