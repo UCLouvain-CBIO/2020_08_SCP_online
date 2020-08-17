@@ -71,10 +71,8 @@
 \headcommand {\beamer@framepages {33}{33}}
 \headcommand {\slideentry {5}{0}{3}{34/34}{}{0}}
 \headcommand {\beamer@framepages {34}{34}}
-\headcommand {\slideentry {5}{0}{4}{35/35}{}{0}}
-\headcommand {\beamer@framepages {35}{35}}
-\headcommand {\slideentry {5}{0}{5}{36/36}{}{0}}
-\headcommand {\beamer@framepages {36}{36}}
+\headcommand {\slideentry {5}{0}{4}{35/36}{}{0}}
+\headcommand {\beamer@framepages {35}{36}}
 \headcommand {\beamer@sectionpages {32}{36}}
 \headcommand {\beamer@subsectionpages {32}{36}}
 \headcommand {\sectionentry {6}{\translate {References}}{37}{\translate {References}}{0}}
@@ -84,4 +82,4 @@
 \headcommand {\beamer@subsectionpages {32}{37}}
 \headcommand {\beamer@sectionpages {32}{37}}
 \headcommand {\beamer@documentpages {37}}
-\headcommand {\gdef \inserttotalframenumber {32}}
+\headcommand {\gdef \inserttotalframenumber {31}}
