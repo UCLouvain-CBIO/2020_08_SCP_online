@@ -130,12 +130,12 @@ single-cell proteomics data}
   \frametitlesection{The value of replication (1)}
 
   \begin{itemize}
-  \item \textbf{Computational} reproducibility.
-  \item Can we trust results that can't be reproduced?
-  \item Replication isn't a guarantee for accuracy, but the lack
-    of replicability is all but not a sign thereof.
+  \item<+-> Expectation
+    \includegraphics[width=\linewidth]{figs/expectation.png}
+  \item<+-> Reality
+    \includegraphics[width=\linewidth]{figs/reality.png}
   \end{itemize}
-
+  
 \end{frame}
 
 \begin{frame}
@@ -144,15 +144,18 @@ single-cell proteomics data}
   \begin{itemize}
   \item \textbf{Reproduction-based development} agreement between the
     developer, the data producer and the user.
-    
-  \item Replication is the first step to define sound data
-    infrastructure and principled analysis.
   \end{itemize}
 
+
+  \bigskip
+  
+  Replication is the first step to define sound data infrastructure
+  and principled analysis.
+  
 \end{frame}
 
 \begin{frame}
-  \frametitlesection{Why SCoPE2 (but not only)}
+  \frametitlesection{Why SCoPE2}
     \begin{itemize}
         \item{SCoPE2 quantifies thousands of proteins x thousands single-cells}
         \item{Full protocole available}
@@ -166,7 +169,7 @@ single-cell proteomics data}
     \frametitlesection{Our objectives}
   
     \begin{itemize}
-    \item Contribute a standardized and principles data and analysis
+    \item Contribute a standardized and principled data and analysis
       that is broadly applicable.
 
     \item Reproducible computational infrastructure to further
@@ -233,7 +236,7 @@ single-cell proteomics data}
 
 
 \begin{frame}
-    \frametitlesection{Data infrastructure (3)}
+    \frametitlesection{Data infrastructure: scp}
 
     \hcode{scp} = \hcode{SingleCellExperiment} + \hcode{QFeatures}
     \begin{figure}
@@ -633,6 +636,7 @@ addAssayLinkOneToOne(from = "proteins",
 
 
 \begin{frame}
+  \frametitlesection{Take home message}  
   \begin{itemize}
   \item MS-based single cell proteomics: young field, with many
     challenges and great progess. \hcode{scp} to address the need for
@@ -641,6 +645,8 @@ addAssayLinkOneToOne(from = "proteins",
     other LF protocols such as nanoPOTS (\citet{Williams2020-nv,Cong2020-kh}).
   \item \hcode{scp} and \hcode{SingleCellExperiment}: same
     infrastructure for single cell proteomics and RNA sequencing.
+  \item Tool for novel computational developments.
+    
   \end{itemize}
 \end{frame}
 
@@ -652,29 +658,6 @@ addAssayLinkOneToOne(from = "proteins",
 
 \end{frame}
 
-\begin{frame}
-    \frametitlesection{Take home message}
-
-    \begin{itemize}
-        \item{\hcode{scp} package suite provides a standardized environment for
-        performing MS-SCP data analysis}
-        \item{Flexibly reproduce existing analyses from different groups or
-        protocoles (multiplex vs label free)}
-    \end{itemize}
-
-    \bigskip
-
-    Advantages:
-
-    \begin{itemize}
-        \item{Allow automation of the analysis}
-        \item{Facilitate new computational developments}
-        \item{Promotes reproducibility}
-        \item{Increases field visibility}
-        \item{Include other modalities: scRNA-Seq, ATAC-Seq, etc}
-    \end{itemize}
-
-\end{frame}
 
 \begin{frame}
     \frametitlesection{Resources}
@@ -682,20 +665,16 @@ addAssayLinkOneToOne(from = "proteins",
     \textbf{Packages}
 
     \begin{itemize}
-        \item{\hcode{scp}: GitHub repository \hcode{UClouvain-CBIO/scp}}
-        \item{\hcode{scpdata}: coming soon
-        \item{\hcode{QFeatures}: GitHub repository \hcode{rformassspectrometry/QFeatures}}
-        \item{\hcode{SingleCellExperiment}: Bioconductor}}
+        \item \hcode{scp}: \url{http://UClouvain-CBIO.github.io/scp}
+        \item \hcode{scpdata}: coming soon
+        \item \hcode{QFeatures}: \url{http://rformassspectrometry.github.io/QFeatures}
+        \item \hcode{SingleCellExperiment}: Bioconductor
     \end{itemize}
 
-    \bigskip
-
 
     \bigskip
 
-    \textbf{Slides and source code}
-
-    Available at...
+    \textbf{Slides}: http://bit.ly/SCP2020
 
 \end{frame}
 
@@ -707,6 +686,11 @@ addAssayLinkOneToOne(from = "proteins",
     \item Fonds National de la Recherche Scientifique (FNRS)
     \end{itemize}
 
+    \bigskip
+
+    \textbf{Thank you for your attention}
+    
+    
 \end{frame}
 
 

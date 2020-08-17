@@ -1,5 +1,5 @@
 \beamer@sectionintoc {1}{Introduction}{2}{0}{1}
-\beamer@sectionintoc {2}{scp package}{7}{0}{2}
-\beamer@sectionintoc {3}{scp showcase}{18}{0}{3}
-\beamer@sectionintoc {4}{Replication results}{26}{0}{4}
-\beamer@sectionintoc {5}{Conclusion}{31}{0}{5}
+\beamer@sectionintoc {2}{scp package}{8}{0}{2}
+\beamer@sectionintoc {3}{scp showcase}{19}{0}{3}
+\beamer@sectionintoc {4}{Replication results}{27}{0}{4}
+\beamer@sectionintoc {5}{Conclusion}{32}{0}{5}
