@@ -89,10 +89,10 @@ graph2pdf(p, file = "figs/Benchmark_prot_venn.pdf", width = 4, height = 2.5)
 
 ## The difference between SCoPE2 and scp protein data
 rows <- intersect(rownames(proteins), 
-                  rownames(specht2019v2[["proteins_batchC"]]))
+                  rownames(specht2019v2[["proteins_batchC_norm"]]))
 cols <- intersect(colnames(proteins), 
-                  colnames(specht2019v2[["proteins_batchC"]]))
-err <- assay(proteins)[rows, cols] - assay(specht2019v2[["proteins_batchC"]])[rows, cols]
+                  colnames(specht2019v2[["proteins_batchC_norm"]]))
+err <- assay(proteins)[rows, cols] - assay(specht2019v2[["proteins_batchC_norm"]])[rows, cols]
 data.frame(difference = as.vector(err[!is.na(err)])) %>%
     mutate(difference = abs(difference)) %>%
     ggplot() +
@@ -126,10 +126,9 @@ plotwPCA <- function(sce) {
         ## Annotate plot
         xlab(paste0("PC1 (", pcaPercentVar[1], "%)")) +
         ylab(paste0("PC2 (", pcaPercentVar[2], "%)")) +
-        ggtitle("PCA plot of the processed protein data") +
         ## Adapt the visual style to match the preprint figure
-        # scale_color_manual(name = "", values = c("#048ABF","#FF5733"), 
-        #                    labels = c("Macrophages", "Monocytes")) +
+        scale_color_manual(name = "", values = c("#048ABF","#FF5733"),
+                           labels = c("Macrophages", "Monocytes")) +
         theme_minimal() +
         theme(legend.position = "top")
 }
