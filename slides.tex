@@ -62,11 +62,11 @@
 %% ------------
 \title{Standardised and reproducible analysis of mass spectrometry-based 
 single-cell proteomics data}
-% \subtitle{Replication of the SCoPE2 analysis by Specht et al. 2019}
+\subtitle{Replication of the SCoPE2 analysis by Specht et al. 2019}
 % \subtitle{Slides available at: \url{}}
 \author[]{Laurent Gatto, Christophe Vanderaa}
 \date{18 August 2020}
-\institute[]{CBIO, de Duve Institute, UCLouvain}
+\institute[]{Computational Biology Unit (CBIO), de Duve Institute, UCLouvain}
 
 \begin{document}
     
@@ -228,7 +228,7 @@ single-cell proteomics data}
 \begin{frame}[fragile]
     \frametitlesection{Load data}
     
-    Load the SCoPE2 dataset called \hcode{specht2019v2}
+    Load the SCoPE2 dataset called \hcode{specht2019v2}\footnote{\citet{Specht2019-jm}}
     
     \begin{lstlisting}
 library(scpdata)
@@ -255,7 +255,8 @@ An instance of class QFeatures containing 179 assays:
     \bigskip
     \footnotesize
     
-    Dataset generated from MaxQuant output file using \hcode{readSCP()}
+    Tabular data (such as generated from MaxQuant, ProteomeDiscoverer,
+    ...) can be read using the \hcode{readSCP()} function.
     
 \end{frame}
 
@@ -703,6 +704,11 @@ An instance of class QFeatures containing 180 assays:
 
 \begin{frame}
     \frametitlesection{Acknowledgements}
+
+    \begin{itemize}
+    \item Nikolai Slavov, Harrison Specht, Ed Emmott.
+    \item Fonds National de la Recherche Scientifique (FNRS)
+    \end{itemize}
     
 \end{frame}
 
