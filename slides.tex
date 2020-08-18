@@ -143,7 +143,7 @@ single-cell proteomics data}
   \item<+-> Reality
     \includegraphics[width=\linewidth]{figs/reality.png}
   \end{itemize}
-  
+
 \end{frame}
 
 \begin{frame}
@@ -156,10 +156,10 @@ single-cell proteomics data}
 
 
   \bigskip
-  
+
   Replication is the first step to define sound data infrastructure
   and principled analysis.
-  
+
 \end{frame}
 
 \begin{frame}
@@ -175,7 +175,7 @@ single-cell proteomics data}
 
 \begin{frame}
     \frametitlesection{Our objectives}
-  
+
     \begin{itemize}
     \item Contribute a standardised and principled data and analysis
       that is broadly applicable.
@@ -186,11 +186,11 @@ single-cell proteomics data}
 
     \item R and Bioconductor (\citet{Huber2015-sn}) offer an ideal
       environment to attain these goals.
-      
+
     \end{itemize}
 
     \bigskip
-    
+
     Implemented in the \hcode{scp} package.
 
 \end{frame}
@@ -253,8 +253,8 @@ single-cell proteomics data}
         \centering
         \includegraphics[width=\linewidth]{figs/SCP_framework.pdf}
     \end{figure}
-    
-    \textbf{AND} utility functions dedicated to managing and analyzing SCP data 
+
+    \textbf{AND} functions dedicated to processing and analyzing SCP data.
 
 
 \end{frame}
@@ -296,10 +296,10 @@ An instance of class QFeatures containing 179 assays:
 \begin{frame}[fragile]
     \frametitlesection{Metadata}
 
-    Sample metadata common to \textbf{all assays} are stored in a single 
+    Sample metadata common to \textbf{all assays} are stored in a single
     table, the \hcode{colData}
-    
-    \begin{table}[!htbp] 
+
+    \begin{table}[!htbp]
         \makebox[\textwidth]{ % For centering because table is too large
         \centering
         \scriptsize
@@ -406,14 +406,14 @@ filterFeatures(specht2019v2,
 \begin{frame}[fragile]
     \frametitlesection{Data filtering: compute QC metrics}
     \small
-    Some QC metrics are not compued by MaxQuant: 
-    
+    Some QC metrics are not compued by MaxQuant:
+
     \begin{itemize}
-        \item{Sample to carrier ratio}: discard samples with intensities higher 
+        \item{Sample to carrier ratio}: discard samples with intensities higher
         than expected
-        \item{Peptide FDR: expected proportion of features wrongly assigned to a 
+        \item{Peptide FDR: expected proportion of features wrongly assigned to a
         given peptide}
-        \item{Cell median coefficient of variation: reliability of the protein 
+        \item{Cell median coefficient of variation: reliability of the protein
         quantification in a cell.}
     \end{itemize}
 
@@ -459,12 +459,12 @@ specht2019v2[["peptides"]] %>%
 
     \begin{columns}
         \begin{column}{0.6\textwidth}
-            Feature aggregation = combine features into a higher-level structure. 
-            
+            Feature aggregation = combine features into a higher-level structure.
+
             \bigskip
-    
+
             Example: aggregate peptides to proteins
-    
+
         \end{column}
         \begin{column}{0.35\textwidth}
             \includegraphics[width=\textwidth]{figs/QFeatures.pdf}
@@ -472,12 +472,12 @@ specht2019v2[["peptides"]] %>%
     \end{columns}
 
     \begin{itemize}
-                \item{Combine the quantitative data from multiple peptides to a 
+                \item{Combine the quantitative data from multiple peptides to a
                 single protein}
-                \item{Store the relationship between the protein and the 
+                \item{Store the relationship between the protein and the
                 aggregated peptides}
             \end{itemize}
-    
+
     \begin{lstlisting}
 aggregateFeatures(specht2019v2,
                   i = "peptides",
@@ -503,23 +503,23 @@ zeroIsNA(specht2019v2,
     \end{lstlisting}
 
     Remove highly-missing features (e.g. >= 99 \%)
-    
+
     \begin{lstlisting}
 filterNA(specht2019v2,
          i = "peptides",
          pNA = 0.99)
     \end{lstlisting}
-    
+
     Impute missing data
-    
+
     \begin{lstlisting}
-impute(specht2019v2, 
-       i = "proteins", 
-       method = "knn", 
+impute(specht2019v2,
+       i = "proteins",
+       method = "knn",
        k = 3)
     \end{lstlisting}
-    
-    
+
+
 
     Source code in \hcode{QFeatures}
 
@@ -530,7 +530,7 @@ impute(specht2019v2,
 
     Common data transformation can easily be applied such as \textbf{log-transformation}
     or \textbf{normalization}.
-    
+
     \bigskip
 
 
@@ -550,13 +550,13 @@ logTransform(specht2019v2,
 \begin{frame}[fragile]
     \frametitlesection{Custom functions}
 
-    \textbf{Custom function} can be applied to the data set, for example batch 
+    \textbf{Custom function} can be applied to the data set, for example batch
     correction using `ComBat`. Three-step procedure:
-    
+
     \begin{enumerate}
         \item Extract the assay to process
     \end{enumerate}
-    
+
     \begin{lstlisting}[basicstyle = \scriptsize\ttfamily\color{vdgray}]
 x <- specht2019v2[["proteins"]]
     \end{lstlisting}
@@ -565,16 +565,16 @@ x <- specht2019v2[["proteins"]]
         \setcounter{enumi}{1}
         \item Apply the custom function
     \end{enumerate}
-    
+
     \begin{lstlisting}[firstnumber=2,  basicstyle = \scriptsize\ttfamily\color{vdgray}]
 assay(x) <- ComBat(assay(x), ...)
     \end{lstlisting}
-    
+
     \begin{enumerate}
         \setcounter{enumi}{2}
         \item Add the processed assay in the dataset
     \end{enumerate}
-    
+
     \begin{lstlisting}[firstnumber=3,  basicstyle = \scriptsize\ttfamily\color{vdgray}]
 addAssay(specht2019v2, x, name = "proteins_batch_corrected")
     \end{lstlisting}
@@ -613,11 +613,11 @@ addAssay(specht2019v2, x, name = "proteins_batch_corrected")
 
 \begin{frame}
     \frametitlesection{Replicate weighted PCA}
-    
+
     Weighted PCA on the \textbf{protein} data
 
     \bigskip
-    
+
     \begin{columns}
         \small
         \begin{column}{0.5\textwidth}
@@ -635,13 +635,13 @@ addAssay(specht2019v2, x, name = "proteins_batch_corrected")
     \frametitlesection{Note about reproducibility}
 
     \small
-    
-    Good software development includes continuous maintenance and improvement 
+
+    Good software development includes continuous maintenance and improvement
     \textbf{BUT} might impact reproducibility
-    
+
     \bigskip
 
-    Example: batch correction using 2 versions of the \hcode{ComBat} 
+    Example: batch correction using 2 versions of the \hcode{ComBat}
     algorithm (\hcode{sva} package)
 
     \bigskip
@@ -660,7 +660,7 @@ addAssay(specht2019v2, x, name = "proteins_batch_corrected")
     \end{columns}
 
     \bigskip
-    
+
     Documenting software version is \textbf{essential} for reproducible work
 
 \end{frame}
@@ -674,7 +674,7 @@ addAssay(specht2019v2, x, name = "proteins_batch_corrected")
 
 
 \begin{frame}
-  \frametitlesection{Take home message}  
+  \frametitlesection{Take home message}
   \begin{itemize}
   \item MS-based single cell proteomics: young field, with many
     challenges and great progess. \hcode{scp} to address the need for
@@ -684,7 +684,7 @@ addAssay(specht2019v2, x, name = "proteins_batch_corrected")
   \item \hcode{scp} and \hcode{SingleCellExperiment}: same
     infrastructure for single cell proteomics and RNA sequencing.
   \item Tool for novel computational developments.
-    
+
   \end{itemize}
 \end{frame}
 
@@ -718,7 +718,7 @@ addAssay(specht2019v2, x, name = "proteins_batch_corrected")
     \item \textbf{Thank you for your attention}
     \end{itemize}
   \end{block}
-  
+
 \end{frame}
 
 
