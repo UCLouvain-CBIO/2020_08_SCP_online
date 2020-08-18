@@ -98,10 +98,10 @@ cols <- intersect(colnames(proteins),
                   colnames(specht2019v2[["peptides_log"]]))
 err <- assay(peptides)[rows, cols] - assay(specht2019v2[["peptides_log"]])[rows, cols]
 data.frame(difference = as.vector(err[!is.na(err)])) %>%
-    mutate(difference = abs(difference)) %>%
+    mutate(difference = difference) %>%
     ggplot() +
     geom_histogram(aes(x = difference)) +
-    xlab("|SCoPE2 - scp|") ->
+    xlab("SCoPE2 - scp") ->
     p
 graph2pdf(p, file = "figs/Benchmark_pep_err.pdf", width = 4, height = 2.5)
 
@@ -119,10 +119,10 @@ cols <- intersect(colnames(proteins),
                   colnames(specht2019v2[["proteins_batchC_norm"]]))
 err <- assay(proteins)[rows, cols] - assay(specht2019v2[["proteins_batchC_norm"]])[rows, cols]
 data.frame(difference = as.vector(err[!is.na(err)])) %>%
-    mutate(difference = abs(difference)) %>%
+    mutate(difference = difference) %>%
     ggplot() +
     geom_histogram(aes(x = difference)) +
-    xlab("|SCoPE2 - scp|") ->
+    xlab("SCoPE2 - scp") ->
     p
 graph2pdf(p, file = "figs/Benchmark_prot_err.pdf", width = 4, height = 2.5)
 
