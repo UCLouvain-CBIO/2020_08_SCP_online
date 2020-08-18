@@ -66,7 +66,7 @@ single-cell proteomics data}
 % \subtitle{Slides available at: \url{}}
 \author[]{Christophe Vanderaa, Laurent Gatto}
 \date{18 August 2020}
-\institute[]{Computational Biology Unit (CBIO), de Duve Institute, UCLouvain}
+\institute[]{Computational Biology Unit (CBIO)\\de Duve Institute\\UCLouvain\\Belgium}
 
 \begin{document}
 
@@ -127,55 +127,63 @@ single-cell proteomics data}
 \section{Introduction}
 
 \begin{frame}
-  \frametitlesection{The value of replication}
+  \frametitlesection{The value of replication (1)}
 
   \begin{itemize}
-  \item \textbf{Computational} reproducibility.
-  \item Can we trust results that can't be reproduced?
-  \item Replication isn't a guarantee for accuracy, but the lack
-    of replicability is all but not a sign thereof.
-  \item \textbf{Reproduction-based development} Development isn't done
-    in isolation: agreement between the developer, the data producer
-    and the user.
-  \item Replication is the first step to define sound data
-    infrastructure and principled analysis.
+  \item<+-> Expectation
+    \includegraphics[width=\linewidth]{figs/expectation.png}
+  \item<+-> Reality
+    \includegraphics[width=\linewidth]{figs/reality.png}
   \end{itemize}
-
+  
 \end{frame}
 
+\begin{frame}
+  \frametitlesection{The value of replication (2)}
+
+  \begin{itemize}
+  \item \textbf{Replication-based development} agreement between the
+    developer, the data producer and the user.
+  \end{itemize}
+
+
+  \bigskip
+  
+  Replication is the first step to define sound data infrastructure
+  and principled analysis.
+  
+\end{frame}
 
 \begin{frame}
-  \frametitlesection{Why SCoPE2 (but not only)}
-
+  \frametitlesection{Why SCoPE2}
     \begin{itemize}
         \item{SCoPE2 quantifies thousands of proteins x thousands single-cells}
         \item{Full protocole available}
-        \item{Full analysis script available}
+        \item{Full analysis script and data available}
     \end{itemize}
 
-    \begin{itemize}
-      \item Contribute a standardized and principles data and analysis
-        that is broadly applicable.
-      \item Reproducible computational infrastructure to further
-        improve data analysis and interpretation.
-    \end{itemize}
 
 \end{frame}
 
 \begin{frame}
     \frametitlesection{Our objectives}
-
-    Provide a suite of software package dedicated to MS-SCP that fulfill:
-
+  
     \begin{itemize}
-        \item{User-friendly}
-        \item{Computationaly efficient}
-        \item{Modularity: integrate other software packages}
-        \item{Promote reproducibility}
-        \item{Platform-independent}
+    \item Contribute a standardised and principled data and analysis
+      that is broadly applicable.
+
+    \item Open, transparent and reproducible computational
+      infrastructure to further improve data analysis and
+      interpretation.
+
+    \item R and Bioconductor (\citet{Huber2015-sn}) offer an ideal
+      environment to attain these goals.
+      
     \end{itemize}
 
-    R/Bioconductor is an ideal environment
+    \bigskip
+    
+    Implemented in the \hcode{scp} package.
 
 \end{frame}
 
@@ -653,6 +661,7 @@ addAssay(specht2019v2, x, name = "proteins_batch_corrected")
 
 
 \begin{frame}
+  \frametitlesection{Take home message}  
   \begin{itemize}
   \item MS-based single cell proteomics: young field, with many
     challenges and great progess. \hcode{scp} to address the need for
@@ -661,6 +670,8 @@ addAssay(specht2019v2, x, name = "proteins_batch_corrected")
     other LF protocols such as nanoPOTS (\citet{Williams2020-nv,Cong2020-kh}).
   \item \hcode{scp} and \hcode{SingleCellExperiment}: same
     infrastructure for single cell proteomics and RNA sequencing.
+  \item Tool for novel computational developments.
+    
   \end{itemize}
 \end{frame}
 
@@ -672,63 +683,30 @@ addAssay(specht2019v2, x, name = "proteins_batch_corrected")
 
 \end{frame}
 
-\begin{frame}
-    \frametitlesection{Take home message}
-
-    \begin{itemize}
-        \item{\hcode{scp} package suite provides a standardized environment for
-        performing MS-SCP data analysis}
-        \item{Flexibly reproduce existing analyses from different groups or
-        protocoles (multiplex vs label free)}
-    \end{itemize}
-
-    \bigskip
-
-    Advantages:
-
-    \begin{itemize}
-        \item{Allow automation of the analysis}
-        \item{Facilitate new computational developments}
-        \item{Promotes reproducibility}
-        \item{Increases field visibility}
-        \item{Include other modalities: scRNA-Seq, ATAC-Seq, etc}
-    \end{itemize}
-
-\end{frame}
 
 \begin{frame}
-    \frametitlesection{Resources}
 
-    \textbf{Packages}
-
+  \begin{block}{Resources}<+->
     \begin{itemize}
-        \item{\hcode{scp}: GitHub repository \hcode{UClouvain-CBIO/scp}}
-        \item{\hcode{scpdata}: coming soon
-        \item{\hcode{QFeatures}: GitHub repository \hcode{rformassspectrometry/QFeatures}}
-        \item{\hcode{SingleCellExperiment}: Bioconductor}}
+        \item \hcode{scp}: \url{http://UClouvain-CBIO.github.io/scp}
+        \item \hcode{scpdata}: coming soon
+        \item \hcode{QFeatures}: \url{http://rformassspectrometry.org}
+        \item \hcode{SingleCellExperiment}: Bioconductor
+        \item \textbf{Slides}: \textbf{\url{http://bit.ly/2020SCP}} under CC-BY SA
     \end{itemize}
+  \end{block}
 
-    \bigskip
+  \bigskip
 
-
-    \bigskip
-
-    \textbf{Slides and source code}
-
-    Available at...
-
-\end{frame}
-
-\begin{frame}
-    \frametitlesection{Acknowledgements}
-
+  \begin{block}{Acknowledgements}<+->
     \begin{itemize}
     \item Nikolai Slavov, Harrison Specht, Ed Emmott.
     \item Fonds National de la Recherche Scientifique (FNRS)
+    \item \textbf{Thank you for your attention}
     \end{itemize}
-
+  \end{block}
+  
 \end{frame}
-
 
 
 %-----------------------------------------------
